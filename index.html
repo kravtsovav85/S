@@ -1,517 +1,404 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Алексей Кравцов | Бизнес-психолог | Кризис без разрушения себя</title>
-    <meta name="description" content="Бизнес-психолог, сертифицированный психоаналитический коуч (АПКБК), EMT-коуч. Психолог, понимающий P&L. Построил бизнес 400 млн, привлёк $1 млн инвестиций. Вхожу в пул коучей Сколково. Ментор Московского экспортного центра. Экспресс-форматы: снятие тревоги, делегирование, возврат драйва. Диагностика 30 мин бесплатно.">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            background: #D9D2C5;
-            font-family: 'Lato', 'Open Sans', 'Segoe UI', sans-serif;
-            color: #2C2B29;
-            line-height: 1.5;
-            padding: 2rem 1rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: #FEFCF8;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            overflow: hidden;
-        }
-
-        h1, h2, h3, .quote, .hero-title, .logo-font {
-            font-family: 'Playfair Display', 'Georgia', serif;
-        }
-
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 600;
-            color: #1C2E3A;
-            line-height: 1.2;
-            margin-bottom: 0.5rem;
-            text-align: center;
-        }
-
-        h2 {
-            font-size: 1.5rem;
-            font-weight: 500;
-            color: #1C2E3A;
-            border-left: 4px solid #4A5D4E;
-            padding-left: 1rem;
-            margin: 1.8rem 0 1.2rem;
-        }
-
-        h3 {
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #2C2B29;
-            margin: 1rem 0 0.5rem;
-        }
-
-        .badge {
-            background: #F0EDE6;
-            display: inline-block;
-            padding: 0.2rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            margin-right: 0.5rem;
-            margin-bottom: 0.3rem;
-            color: #1C2E3A;
-        }
-
-        .photo-section {
-            text-align: center;
-            margin: 1.5rem 0;
-        }
-        .photo-placeholder {
-            display: inline-block;
-            max-width: 90%;
-        }
-        .photo-placeholder img {
-            width: 100%;
-            max-width: 640px;
-            aspect-ratio: 16 / 9;
-            object-fit: cover;
-            border-radius: 8px;
-            border: 1px solid #D9D2C5;
-            background: #F0EDE6;
-        }
-
-        .accordion-item {
-            border-bottom: 1px solid #E2DBCF;
-            margin-bottom: 0.5rem;
-        }
-        .accordion-header {
-            background: #FEFCF8;
-            padding: 0.8rem 0;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            color: #1C2E3A;
-        }
-        .accordion-icon {
-            font-size: 1.2rem;
-            transition: transform 0.2s;
-        }
-        .accordion-content {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            padding: 0;
-        }
-        .accordion-content.open {
-            max-height: 800px;
-            padding-bottom: 1rem;
-        }
-        .requests-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 0.6rem;
-        }
-        .request-item {
-            background: #F0EDE6;
-            padding: 0.5rem 0.8rem;
-            border-radius: 30px;
-            font-size: 0.85rem;
-            line-height: 1.3;
-        }
-
-        .grid-3, .express-grid, .cert-grid {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 1.5rem 0;
-        }
-        .card, .express-card, .cert-card {
-            flex: 1;
-            min-width: 200px;
-            background: #FEFCF8;
-            border: 1px solid #E2DBCF;
-            border-radius: 16px;
-            padding: 1rem;
-        }
-        .express-card {
-            background: #F8F4E8;
-            border-left: 4px solid #4A5D4E;
-        }
-        .cert-card {
-            text-align: center;
-            background: #F8F4E8;
-        }
-        .cert-card img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            border: 1px solid #D9D2C5;
-            margin-bottom: 0.5rem;
-        }
-        .price-card {
-            background: #FEFCF8;
-            border: 1px solid #D9D2C5;
-            border-radius: 20px;
-            padding: 1rem;
-            text-align: center;
-        }
-        .price-card h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.3rem;
-        }
-        .price {
-            font-size: 1.6rem;
-            font-weight: 700;
-            color: #4A5D4E;
-            margin: 0.5rem 0;
-        }
-        .discount {
-            background: #F0EDE6;
-            display: inline-block;
-            padding: 0.2rem 0.6rem;
-            border-radius: 20px;
-            font-size: 0.75rem;
-        }
-
-        .btn {
-            display: inline-block;
-            background: #4A5D4E;
-            color: white;
-            padding: 0.6rem 1.2rem;
-            border-radius: 40px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            transition: 0.2s;
-            border: none;
-            cursor: pointer;
-        }
-        .btn:hover {
-            background: #1C2E3A;
-        }
-
-        .social-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            margin: 1.5rem 0;
-        }
-        .social-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #F0EDE6;
-            padding: 0.5rem 1rem;
-            border-radius: 40px;
-            text-decoration: none;
-            color: #1C2E3A;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: 0.2s;
-            border: 1px solid #D9D2C5;
-        }
-        .social-btn:hover {
-            background: #E2DBCF;
-        }
-
-        .footer {
-            background: #F8F4E8;
-            padding: 1.5rem;
-            text-align: center;
-            font-size: 0.75rem;
-            color: #7C7A73;
-            border-top: 1px solid #D9D2C5;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 700px) {
-            .requests-grid {
-                grid-template-columns: 1fr;
-            }
-            h1 { font-size: 1.6rem; }
-            h2 { font-size: 1.3rem; }
-        }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Алексей Кравцов | Бизнес-психолог для собственников и CEO</title>
+  <meta name="description" content="Психология управленческих решений собственника. Работа с переходами, повторяющимися управленческими сценариями, сопротивлением продажам и деньгам. Алексей Кравцов, бизнес-психолог, понимающий экономику бизнеса и управленческую отчётность.">
+  <link rel="canonical" href="https://alekseykravtsov.ru/">
+  <meta property="og:type" content="profile">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:title" content="Алексей Кравцов | Бизнес-психолог для собственников и CEO">
+  <meta property="og:description" content="Помогаю увидеть и изменить внутренние сценарии, которые влияют на решения, деньги, команду и партнёрства.">
+  <meta property="og:url" content="https://alekseykravtsov.ru/">
+  <meta property="og:image" content="https://alekseykravtsov.ru/alexey_kravtsov.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#18201d">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["Person", "ProfessionalService"],
+    "name": "Алексей Викторович Кравцов",
+    "alternateName": "Алексей Кравцов",
+    "url": "https://alekseykravtsov.ru/",
+    "image": "https://alekseykravtsov.ru/alexey_kravtsov.jpg",
+    "jobTitle": "Бизнес-психолог",
+    "description": "Бизнес-психолог для собственников и CEO. Специализация: психология управленческих решений собственника.",
+    "areaServed": "RU",
+    "sameAs": [
+      "https://t.me/AlekseyKravtsov",
+      "https://t.me/kravtsov_av_BP",
+      "https://www.linkedin.com/in/kravtsovav/",
+      "https://www.youtube.com/@KravtsovAV",
+      "https://vk.com/club233782665",
+      "https://cmp-i.com/specialist/8170"
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --ink:#17201d;
+      --muted:#5f6661;
+      --paper:#f5f1e9;
+      --paper-2:#ebe4d8;
+      --green:#263b34;
+      --copper:#b87945;
+      --line:rgba(23,32,29,.14);
+      --white:#fffdfa;
+      --shadow:0 18px 55px rgba(23,32,29,.10);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,Arial,sans-serif;line-height:1.65}
+    body:before{content:"";position:fixed;inset:0;pointer-events:none;background:radial-gradient(circle at 12% 8%,rgba(184,121,69,.12),transparent 28%),radial-gradient(circle at 90% 36%,rgba(38,59,52,.10),transparent 32%);z-index:-1}
+    a{color:inherit}
+    img{max-width:100%;display:block}
+    .wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+    .nav{position:sticky;top:0;z-index:10;background:rgba(245,241,233,.92);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+    .nav-inner{height:72px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-family:Georgia,serif;font-size:1.08rem;text-decoration:none;letter-spacing:.01em}
+    .nav-links{display:flex;align-items:center;gap:24px;font-size:.88rem}
+    .nav-links a{text-decoration:none;color:var(--muted)}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 22px;border-radius:999px;background:var(--green);color:white;text-decoration:none;font-weight:700;border:1px solid var(--green);transition:.2s}
+    .button:hover{transform:translateY(-1px);background:#172a24}
+    .button.secondary{background:transparent;color:var(--green)}
+    .button.light{background:var(--white);color:var(--green);border-color:var(--white)}
+    .hero{padding:72px 0 56px}
+    .hero-grid{display:grid;grid-template-columns:minmax(0,1.14fr) minmax(330px,.86fr);gap:72px;align-items:center}
+    .eyebrow{font-size:.78rem;font-weight:800;text-transform:uppercase;letter-spacing:.16em;color:var(--copper);margin-bottom:20px}
+    h1,h2,h3{font-family:Georgia,serif;font-weight:500;line-height:1.13;margin-top:0}
+    h1{font-size:clamp(2.65rem,5.7vw,5.7rem);letter-spacing:-.045em;margin-bottom:26px}
+    h2{font-size:clamp(2rem,4vw,3.8rem);letter-spacing:-.035em;margin-bottom:22px}
+    h3{font-size:1.45rem;margin-bottom:12px}
+    .lead{font-size:clamp(1.08rem,1.5vw,1.32rem);max-width:720px;color:#39413d;margin:0 0 32px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap}
+    .hero-photo{position:relative}
+    .hero-photo:before{content:"";position:absolute;inset:22px -22px -22px 22px;border:1px solid var(--copper);border-radius:4px;z-index:-1}
+    .hero-photo img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center;border-radius:4px;box-shadow:var(--shadow)}
+    .hero-note{position:absolute;left:-34px;bottom:28px;max-width:270px;background:var(--green);color:white;padding:18px 20px;border-radius:3px;font-family:Georgia,serif;font-size:1.05rem;box-shadow:var(--shadow)}
+    .proofbar{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .proofgrid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .proof{padding:28px 24px;border-right:1px solid var(--line)}
+    .proof:first-child{padding-left:0}.proof:last-child{border-right:0}
+    .proof strong{display:block;font-family:Georgia,serif;font-size:1.75rem;font-weight:500;color:var(--green)}
+    .proof span{font-size:.84rem;color:var(--muted)}
+    section{padding:88px 0}
+    .section-intro{max-width:740px;margin-bottom:42px}
+    .section-intro p{font-size:1.08rem;color:var(--muted);margin:0}
+    .dark{background:var(--green);color:white}
+    .dark .section-intro p,.dark .muted{color:rgba(255,255,255,.68)}
+    .pain-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .pain-card{min-height:330px;padding:30px;border:1px solid rgba(255,255,255,.16);display:flex;flex-direction:column;background:rgba(255,255,255,.035)}
+    .pain-card .number{color:var(--copper);font-weight:800;letter-spacing:.12em;font-size:.78rem;margin-bottom:46px}
+    .pain-card p{color:rgba(255,255,255,.72);margin:0 0 20px}
+    .pain-card ul{margin:auto 0 0;padding-left:18px;color:rgba(255,255,255,.78);font-size:.91rem}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start}
+    .quote{font-family:Georgia,serif;font-size:clamp(1.55rem,2.7vw,2.65rem);line-height:1.3;border-left:2px solid var(--copper);padding-left:28px;margin:0}
+    .body-copy p{margin-top:0;color:#424943}
+    .body-copy strong{color:var(--ink)}
+    .feature-list{display:grid;gap:0;border-top:1px solid var(--line);margin-top:28px}
+    .feature{display:grid;grid-template-columns:38px 1fr;gap:14px;padding:18px 0;border-bottom:1px solid var(--line)}
+    .feature b{color:var(--copper)}
+    .process{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line)}
+    .step{padding:28px;min-height:245px;border-right:1px solid var(--line);background:rgba(255,253,250,.44)}
+    .step:last-child{border-right:0}
+    .step span{display:block;color:var(--copper);font-weight:800;font-size:.78rem;letter-spacing:.1em;margin-bottom:42px}
+    .step p{color:var(--muted);font-size:.92rem;margin:0}
+    .offer{background:var(--white);box-shadow:var(--shadow);display:grid;grid-template-columns:1.15fr .85fr}
+    .offer-main,.offer-side{padding:42px}
+    .offer-side{background:var(--paper-2)}
+    .price{font-family:Georgia,serif;font-size:2.8rem;line-height:1;margin:18px 0 8px;color:var(--green)}
+    .small{font-size:.86rem;color:var(--muted)}
+    .offer ul{padding-left:19px;margin:22px 0}
+    .diagnostic{margin-top:20px;padding:24px;border:1px solid var(--line)}
+    .credentials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .credential{background:var(--white);border:1px solid var(--line);padding:26px}
+    .credential img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;margin-bottom:22px;border:1px solid var(--line)}
+    .credential p{color:var(--muted);font-size:.9rem;margin-bottom:0}
+    .timeline{display:grid;gap:0;border-top:1px solid var(--line)}
+    .timeline-row{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:20px 0;border-bottom:1px solid var(--line)}
+    .timeline-row strong{color:var(--copper)}
+    .reviews{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:18px}
+    .review{background:var(--white);border:1px solid var(--line);padding:30px;display:flex;flex-direction:column;min-height:280px}
+    .review blockquote{font-family:Georgia,serif;font-size:1.25rem;line-height:1.45;margin:0 0 26px}
+    .review:first-child blockquote{font-size:1.55rem}
+    .review footer{margin-top:auto;color:var(--muted);font-size:.82rem}
+    .boundary{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .boundary-card{padding:30px;border:1px solid var(--line)}
+    .boundary-card ul{padding-left:19px;color:var(--muted)}
+    .cta{background:var(--green);color:white;padding:64px;border-radius:4px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
+    .cta h2{margin-bottom:10px}.cta p{margin:0;color:rgba(255,255,255,.7);max-width:670px}
+    .footer{padding:42px 0;color:var(--muted);font-size:.84rem}
+    .footer-grid{display:flex;justify-content:space-between;gap:32px;align-items:flex-start;border-top:1px solid var(--line);padding-top:28px}
+    .links{display:flex;gap:18px;flex-wrap:wrap}
+    .links a{text-decoration:none}
+    @media(max-width:900px){
+      .nav-links a:not(.button){display:none}.hero-grid,.split,.offer,.cta{grid-template-columns:1fr}.hero-grid{gap:48px}.hero-photo{max-width:520px}.hero-note{left:14px}.proofgrid{grid-template-columns:repeat(2,1fr)}.proof:nth-child(2){border-right:0}.proof:nth-child(-n+2){border-bottom:1px solid var(--line)}.pain-grid,.credentials{grid-template-columns:1fr}.pain-card{min-height:0}.process{grid-template-columns:repeat(2,1fr)}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}.reviews{grid-template-columns:1fr 1fr}.review:first-child{grid-column:1/-1}
+    }
+    @media(max-width:620px){
+      .wrap{width:min(100% - 28px,1160px)}.nav-inner{height:62px}.nav-links{gap:8px}.nav .button{min-height:40px;padding:0 14px;font-size:.8rem}.hero{padding-top:42px}.hero-photo:before{display:none}.hero-note{position:relative;left:0;bottom:auto;margin-top:-22px;margin-left:14px}.proofgrid,.process,.reviews,.boundary{grid-template-columns:1fr}.proof,.proof:first-child{padding:20px 0;border-right:0;border-bottom:1px solid var(--line)}.step{border-right:0;border-bottom:1px solid var(--line);min-height:0}.step span{margin-bottom:20px}.timeline-row{grid-template-columns:1fr;gap:4px}.offer-main,.offer-side{padding:28px}.cta{padding:34px 26px}.actions .button{width:100%}.footer-grid{display:grid}
+    }
+  </style>
 </head>
 <body>
-<div class="container">
-    <!-- шапка с увеличенным прямоугольным фото -->
-    <div style="padding: 2rem 2rem 0 2rem;">
-        <div class="photo-section">
-            <div class="photo-placeholder">
-                <img src="alexey_kravtsov.jpg" alt="Алексей Кравцов" onerror="this.src='https://via.placeholder.com/640x360?text=Загрузите+фото';">
-            </div>
+  <nav class="nav" aria-label="Основная навигация">
+    <div class="wrap nav-inner">
+      <a class="brand" href="#top">Алексей Кравцов</a>
+      <div class="nav-links">
+        <a href="#situations">С чем работаю</a>
+        <a href="#approach">Подход</a>
+        <a href="#format">Формат и цена</a>
+        <a class="button" href="https://cal.com/kravtsovav" target="_blank" rel="noopener">Записаться</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+    <header class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Бизнес-психолог для собственников и CEO</div>
+          <h1>Психология управленческих решений собственника</h1>
+          <p class="lead">Помогаю увидеть и изменить внутренние сценарии, которые влияют на решения, деньги, команду, партнёрства и способность пройти сложный переход.</p>
+          <div class="actions">
+            <a class="button" href="https://cal.com/kravtsovav" target="_blank" rel="noopener">Записаться на диагностику</a>
+            <a class="button secondary" href="https://t.me/AlekseyKravtsov" target="_blank" rel="noopener">Написать в Telegram</a>
+          </div>
         </div>
-        <h1>Алексей Кравцов — бизнес-психолог</h1>
-        <div style="text-align: center; margin: 0.8rem 0;">
-            <span class="badge">Сертифицированный психоаналитический коуч (АПКБК)</span>
-            <span class="badge">EMT-коуч</span>
-            <span class="badge">Пул коучей Сколково</span>
-            <span class="badge">Ментор Московского экспортного центра</span>
+        <div class="hero-photo">
+          <img src="alexey_kravtsov.jpg" alt="Алексей Кравцов, бизнес-психолог">
+          <div class="hero-note">Понимаю не только психику собственника, но и то, как его решения проявляются в экономике бизнеса.</div>
         </div>
-        <p style="text-align: center; max-width: 700px; margin: 0 auto;"><strong>Психолог, понимающий P&L.</strong> Построил бизнес 400 млн, привлёк $1 млн инвестиций.</p>
+      </div>
+    </header>
+
+    <div class="proofbar" aria-label="Ключевые факты">
+      <div class="wrap proofgrid">
+        <div class="proof"><strong>260+</strong><span>индивидуальных сессий</span></div>
+        <div class="proof"><strong>20 лет</strong><span>управленческого опыта</span></div>
+        <div class="proof"><strong>350+ млн ₽</strong><span>совокупная выручка созданного бизнеса</span></div>
+        <div class="proof"><strong>$1+ млн</strong><span>инвестировано в развитие бизнеса</span></div>
+      </div>
     </div>
 
-    <!-- диагностическая сессия с двумя кнопками -->
-    <div style="padding: 0 2rem;">
-        <div class="card" style="background: #F8F4E8; text-align: center; margin: 1rem 0;">
-            <h3 style="margin-top: 0;">Бесплатная диагностическая сессия</h3>
-            <p>30 минут онлайн (Zoom). Разберём ваш запрос, увидим повторяющиеся сценарии, я расскажу, как могу помочь.</p>
-            <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem;">
-                <a href="https://t.me/AlekseyKravtsov" class="btn" target="_blank">Telegram</a>
-                <a href="https://max.ru/u/f9LHodD0cOIHnNimXtmpo8b3xBmi-OYO81FQk8GPDSRmunmvTFJd92UBG5M" class="btn" target="_blank">MAX</a>
-                <a href="https://cal.com/kravtsovav" class="btn" target="_blank" style="background:#1C2E3A;">Записаться на консультацию</a>
-            </div>
-            <p style="font-size: 0.75rem; margin-top: 0.5rem;">Обязательна перед началом работы</p>
+    <section id="situations" class="dark">
+      <div class="wrap">
+        <div class="section-intro">
+          <div class="eyebrow">С чем можно прийти</div>
+          <h2>Три ситуации, в которых прежний способ действовать начинает стоить слишком дорого</h2>
+          <p>Запрос может звучать по-разному. В работе мы вместе уточняем, что происходит, какой механизм поддерживает ситуацию и какое изменение действительно нужно.</p>
         </div>
-    </div>
-
-    <!-- запросы (сворачиваемый блок) -->
-    <div style="padding: 0 2rem;">
-        <h2>Частые запросы клиентов</h2>
-        <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Список запросов (20 ситуаций)</span>
-                <span class="accordion-icon">▼</span>
-            </div>
-            <div class="accordion-content">
-                <div class="requests-grid">
-                    <div class="request-item">1. Просыпаюсь в 3 часа ночи — не могу заснуть от тревоги</div>
-                    <div class="request-item">2. Всё тащу на себе, делегировать страшно</div>
-                    <div class="request-item">3. Команда бесит, не слышит, не тянет</div>
-                    <div class="request-item">4. Делегирую — потом переделываю сам</div>
-                    <div class="request-item">5. Деньги есть, а спокойствия и драйва нет</div>
-                    <div class="request-item">6. Повторяются одни и те же ошибки: нанимаю не тех, срываюсь на партнёрах</div>
-                    <div class="request-item">7. Уперся в потолок — не знаю, куда расти дальше</div>
-                    <div class="request-item">8. Боюсь отпустить контроль — кажется, всё развалится</div>
-                    <div class="request-item">9. Выгорание, усталость, нет энергии на семью и себя</div>
-                    <div class="request-item">10. Принимаю важные решения в стрессе — потом жалею</div>
-                    <div class="request-item">11. Конфликты с партнёрами, разногласия из‑за мелочей</div>
-                    <div class="request-item">12. Вроде всё хорошо, а внутри пустота</div>
-                    <div class="request-item">13. Не могу отключиться от бизнеса даже в отпуске</div>
-                    <div class="request-item">14. Сотрудники не берут ответственность</div>
-                    <div class="request-item">15. Страх потерять бизнес или статус</div>
-                    <div class="request-item">16. Чувство одиночества в принятии решений</div>
-                    <div class="request-item">17. Переработки, а результата нет</div>
-                    <div class="request-item">18. Завишу от чужого мнения, боюсь оценки</div>
-                    <div class="request-item">19. Срываюсь на близких, потом стыдно</div>
-                    <div class="request-item">20. Прошлые сценарии мешают двигаться вперёд</div>
-                </div>
-            </div>
+        <div class="pain-grid">
+          <article class="pain-card">
+            <div class="number">01 / ПЕРЕХОД</div>
+            <h3>Старое уже не работает. Новое пока не получается начать</h3>
+            <p>Прежняя роль, бизнес или способ управления заканчивается, а следующий этап требует внутренней пересборки.</p>
+            <ul><li>нужно выйти из исчерпавшей себя истории</li><li>решение принято, но действия не начинаются</li><li>энергия уходит на удержание старой системы</li></ul>
+          </article>
+          <article class="pain-card">
+            <div class="number">02 / РЕШЕНИЕ</div>
+            <h3>Вы всё понимаете, но привычный сценарий снова управляет выбором</h3>
+            <p>Рационально решение очевидно, но вы снова контролируете, не делегируете, избегаете конфликта или выбираете ненадёжных партнёров.</p>
+            <ul><li>команда не получает ответственности</li><li>повторяются дорогие ошибки</li><li>отношения с партнёрами заходят в тупик</li></ul>
+          </article>
+          <article class="pain-card">
+            <div class="number">03 / ДЕНЬГИ</div>
+            <h3>Трудно продавать, называть цену и занимать позицию своего уровня</h3>
+            <p>Профессионального опыта достаточно, но выход к рынку, видимость и признание собственной ценности вызывают сопротивление.</p>
+            <ul><li>личные продажи постоянно откладываются</li><li>цена снижается раньше переговоров</li><li>собственный результат обесценивается</li></ul>
+          </article>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- ЭКСПРЕСС-ФОРМАТЫ -->
-    <div style="padding: 0 2rem;">
-        <h2>Экспресс-форматы — быстрый вход в психоаналитический коучинг и EMT</h2>
-        <div class="express-grid">
-            <div class="express-card">
-                <h3>Спокойствие и Ресурс</h3>
-                <p>Восстановление внутреннего баланса</p>
-                <p><strong>120 минут</strong> — 20 000 ₽</p>
-                <p>Работаем с тревожностью, эмоциональным напряжением, возвращаем спокойствие и энергию.</p>
-                <p>Результаты: внутреннее спокойствие, улучшение сна, конкретные техники управления тревогой.</p>
-            </div>
-            <div class="express-card">
-                <h3>Лёгкость в управлении</h3>
-                <p>Выход из сценария тотального контроля</p>
-                <p><strong>2 встречи по 90 минут</strong> — 30 000 ₽</p>
-                <p>Работаем с делегированием, доверием команде, распределением ответственности.</p>
-                <p>Результаты: делегирование без стресса, снижение перегрузки, появление времени и энергии для стратегических задач.</p>
-            </div>
-            <div class="express-card">
-                <h3>Новый Драйв</h3>
-                <p>Преодоление внутреннего потолка</p>
-                <p><strong>3 встречи по 50 минут</strong> — 30 000 ₽</p>
-                <p>Работаем с отсутствием мотивации, выгоранием, ощущением «упёрся», поиском новых смыслов и точек роста.</p>
-                <p>Результаты: доступ к внутреннему ресурсу, понимание дальнейших шагов, обновлённая энергия и драйв.</p>
-            </div>
+    <section id="approach">
+      <div class="wrap split">
+        <div>
+          <div class="eyebrow">Главное отличие</div>
+          <p class="quote">Я работаю на стыке психологии собственника и реальности бизнеса: управленческой отчётности, денежных потоков, прибыльности, капитала и цены решений.</p>
         </div>
-        <p style="font-size: 0.85rem; text-align: center; margin-top: 0.5rem;">Если заинтересовала какая-то из программ — напишите мне в личные сообщения название программы. Предложу свободные слоты для встреч.</p>
-    </div>
-
-    <!-- тарифы -->
-    <div style="padding: 0 2rem;">
-        <h2>Индивидуальный коучинг — пакеты от 5 сессий</h2>
-        <div class="grid-3">
-            <div class="price-card">
-                <div class="discount">-10%</div>
-                <h3>5 сессий</h3>
-                <div class="price">45 000 ₽</div>
-                <div>50 мин / Zoom</div>
-                <div>≈ 9 000 ₽ / сессия</div>
-                <div class="discount" style="margin-top: 0.5rem;">3 завершающие сессии включены</div>
-            </div>
-            <div class="price-card">
-                <div class="discount">-15%</div>
-                <h3>10 сессий</h3>
-                <div class="price">85 000 ₽</div>
-                <div>50 мин / Zoom</div>
-                <div>≈ 8 500 ₽ / сессия</div>
-                <div class="discount" style="margin-top: 0.5rem;">3 завершающие сессии включены</div>
-            </div>
-            <div class="price-card">
-                <div class="discount">-20%</div>
-                <h3>20 сессий</h3>
-                <div class="price">160 000 ₽</div>
-                <div>50 мин / Zoom</div>
-                <div>≈ 8 000 ₽ / сессия</div>
-                <div class="discount" style="margin-top: 0.5rem;">3 завершающие сессии включены</div>
-            </div>
+        <div class="body-copy">
+          <h2>Бизнес-психолог, понимающий P&amp;L</h2>
+          <p>За этой формулой стоит не только отчёт о прибылях и убытках. В банковской и предпринимательской работе я глубоко занимался управленческой отчётностью, финансированием, денежными потоками и экономикой решений.</p>
+          <p>Как сооснователь и CEO VMMGAME я выстроил, структурировал и автоматизировал управленческую отчётность. Прозрачность экономики компании стала важной частью её инвестиционной готовности. В развитие бизнеса было инвестировано более одного миллиона долларов США.</p>
+          <p><strong>Поэтому на сессии не нужно объяснять мне, что такое кассовый разрыв, ответственность за фонд оплаты труда или решение, цена которого станет видна в отчётности через несколько месяцев.</strong></p>
+          <div class="feature-list">
+            <div class="feature"><b>01</b><div><strong>Психоаналитическая глубина.</strong> Исследуем повторяющийся внутренний механизм, а не только его внешнее проявление.</div></div>
+            <div class="feature"><b>02</b><div><strong>Прагматичный фокус.</strong> Связываем понимание с конкретным выбором и изменением поведения.</div></div>
+            <div class="feature"><b>03</b><div><strong>Реальность собственника.</strong> Учитываем бизнес, отношения, семью, энергию и цену возможного решения.</div></div>
+          </div>
         </div>
-        <p style="font-size: 0.85rem;">* Разовые сессии не продаются. Пакет включает 3 обязательные завершающие сессии.</p>
-    </div>
+      </div>
+    </section>
 
-    <!-- другие форматы -->
-    <div style="padding: 0 2rem;">
-        <div class="grid-3">
-            <div class="card">
-                <h3>Стратегическая сессия в Сколково</h3>
-                <p>4 часа офлайн, фокус на стратегию, приоритеты, план.</p>
-                <div class="price" style="font-size: 1.3rem;">40 000 ₽</div>
-            </div>
-            <div class="card">
-                <h3>Организационная программа для команды</h3>
-                <p>Диагностика + тренинги + поддерживающие сессии. 3 месяца.</p>
-                <div class="price" style="font-size: 1.3rem;">от 400 000 ₽</div>
-                <p style="font-size: 0.8rem;">Детали по запросу.</p>
-            </div>
+    <section class="dark">
+      <div class="wrap">
+        <div class="section-intro">
+          <div class="eyebrow">Как строится работа</div>
+          <h2>Не готовый совет, а возвращение способности выбирать и действовать</h2>
+          <p>Рабочий запрос формулируется совместно и может меняться, когда становится яснее связь между ситуацией, внутренним механизмом и поведением.</p>
         </div>
-    </div>
-
-    <!-- СЕРТИФИКАТЫ И ОБРАЗОВАНИЕ -->
-    <div style="padding: 0 2rem;">
-        <h2>Сертификаты и образование</h2>
-        <div class="cert-grid">
-            <div class="cert-card">
-                <h3>Диплом ВШЭ</h3>
-                <img src="diplom_hse.jpg" alt="Диплом НИУ ВШЭ" onerror="this.src='https://via.placeholder.com/300x200?text=Диплом+ВШЭ';">
-                <p>Магистр психологии, программа «Психоанализ и психоаналитическое бизнес-консультирование» (2023–2024)</p>
-            </div>
-            <div class="cert-card">
-                <h3>Сертификация АПКБК</h3>
-                <img src="apkbc_cert.jpg" alt="Сертификат АПКБК" onerror="this.src='https://via.placeholder.com/300x200?text=АПКБК';">
-                <p>Сертифицированный психоаналитический коуч</p>
-            </div>
-            <div class="cert-card">
-                <h3>EMT-коуч</h3>
-                <img src="emt_cert.jpg" alt="Сертификат EMT" onerror="this.src='https://via.placeholder.com/300x200?text=EMT';">
-                <p>Технология модификации опыта — сертификация в процессе</p>
-            </div>
+        <div class="process">
+          <div class="step"><span>01 / КОНТЕКСТ</span><h3>Уточняем ситуацию</h3><p>Что происходит сейчас, что уже пробовали, какое решение или изменение необходимо.</p></div>
+          <div class="step"><span>02 / МЕХАНИЗМ</span><h3>Замечаем сценарий</h3><p>Что повторяется, какую функцию выполняет прежний способ действовать и какую цену создаёт.</p></div>
+          <div class="step"><span>03 / ВЫБОР</span><h3>Создаём альтернативу</h3><p>Отделяем внешние ограничения от внутреннего сопротивления и ищем новый способ действия.</p></div>
+          <div class="step"><span>04 / ИЗМЕНЕНИЕ</span><h3>Проверяем в жизни</h3><p>Смотрим, что меняется в решениях, контакте с рынком, отношениях, команде и состоянии.</p></div>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- 12 принципов работы -->
-    <div style="padding: 0 2rem;">
-        <h2>12 принципов работы</h2>
-        <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Принципы работы (нажмите, чтобы развернуть)</span>
-                <span class="accordion-icon">▼</span>
-            </div>
-            <div class="accordion-content">
-                <ul style="margin-left: 1rem;">
-                    <li><strong>1. Не учу — сопровождаю.</strong> У вас есть ответы. Я помогаю их услышать.</li>
-                    <li><strong>2. Результат быстрее терапии.</strong> Меняем механизм → меняем деньги и энергию.</li>
-                    <li><strong>3. Оплата вперёд.</strong> Убивает сопротивление и торг с собой.</li>
-                    <li><strong>4. Кадр помогает решить запрос.</strong> Фиксированное время, регулярность, чёткие границы.</li>
-                    <li><strong>5. Никаких советов «как тебе жить».</strong> Ты не я. Я подсвечиваю механизмы.</li>
-                    <li><strong>6. Разговор равных.</strong> Без зауми, но с объяснением процессов.</li>
-                    <li><strong>7. Не обещаю лёгкости.</strong> Настоящие лекарства горькие, но эффективные.</li>
-                    <li><strong>8. Конфиденциальность.</strong> Что сказал клиент — остаётся внутри сессии.</li>
-                    <li><strong>9. Не работаю с теми, кто ищет «волшебную таблетку».</strong> Её нет.</li>
-                    <li><strong>10. Сопротивление — направление движения.</strong> Роем туда.</li>
-                    <li><strong>11. Я тоже прохожу супервизии и терапию.</strong> Это безопасность для тебя.</li>
-                    <li><strong>12. Прекращаю работу, если нет изменений.</strong> Верну деньги за остаток. Репутация важнее.</li>
-                </ul>
-            </div>
+    <section id="format">
+      <div class="wrap">
+        <div class="section-intro">
+          <div class="eyebrow">Индивидуальная работа</div>
+          <h2>Базовый контракт</h2>
+          <p>Психодинамическая работа требует времени, регулярности и ясных границ. Обычно один запрос занимает от 10 до 20 сессий.</p>
         </div>
-    </div>
-
-    <!-- Образование и профессиональное развитие (краткий список) -->
-    <div style="padding: 0 2rem;">
-        <h2>Образование и профессиональное развитие</h2>
-        <ul>
-            <li><strong>НИУ Высшая школа экономики</strong> — «Психоанализ и психоаналитическое бизнес-консультирование» (2023–2024)</li>
-            <li><strong>Школа бизнеса «Сколково»</strong> — «Экспортная деятельность» (2022)</li>
-            <li><strong>Школа стратегического лидерства «Beyond Taylor»</strong> — «Клиентократия» (2023)</li>
-            <li><strong>НИУ ВШЭ, кафедра психоанализа</strong> — «ЕМТ-терапия как инструмент» (в процессе)</li>
-            <li>Член Ассоциации психоаналитического коучинга</li>
-            <li>Регулярные супервизии (70+ часов), личная терапия (200+ часов), 2 000+ часов обучения</li>
-        </ul>
-    </div>
-
-    <!-- Правила работы (сеттинг) -->
-    <div style="padding: 0 2rem;">
-        <h2>Правила работы</h2>
-        <div class="accordion-item">
-            <div class="accordion-header" onclick="toggleAccordion(this)">
-                <span>Условия и сеттинг (нажмите, чтобы развернуть)</span>
-                <span class="accordion-icon">▼</span>
+        <div class="offer">
+          <div class="offer-main">
+            <h3>10 индивидуальных сессий</h3>
+            <div class="price">80 000 ₽</div>
+            <div class="small">8 000 ₽ за сессию · 50 минут · онлайн в Zoom</div>
+            <ul>
+              <li>оплата двумя блоками по 5 сессий и 40 000 ₽;</li>
+              <li>регулярность и время встреч согласовываются до начала работы;</li>
+              <li>конфиденциальность и профессиональные границы;</li>
+              <li>краткая связь в Telegram по организационным вопросам.</li>
+            </ul>
+            <a class="button" href="https://cal.com/kravtsovav" target="_blank" rel="noopener">Выбрать время диагностики</a>
+          </div>
+          <div class="offer-side">
+            <h3>Как завершается работа</h3>
+            <p>Завершение не происходит внезапно. Оно обсуждается заранее и становится частью процесса.</p>
+            <ul>
+              <li>около 10 встреч: одна завершающая сессия;</li>
+              <li>около 20 встреч: две завершающие сессии;</li>
+              <li>при более длительной работе: три сессии.</li>
+            </ul>
+            <p class="small">Завершающие встречи входят в общее число сессий и оплачиваются на обычных условиях.</p>
+            <div class="diagnostic">
+              <strong>Диагностическая встреча · 30 минут · бесплатно</strong>
+              <p class="small">Коротко знакомимся, уточняем ситуацию и проверяем, соответствует ли мой формат вашей задаче. Эта встреча не заменяет полноценную рабочую сессию.</p>
             </div>
-            <div class="accordion-content">
-                <ul style="margin-left: 1rem; font-size: 0.9rem;">
-                    <li><strong>Формат:</strong> индивидуальные сессии 50 мин, онлайн, только Zoom. Экспресс-форматы: 120 мин или 2–3 встречи по согласованию.</li>
-                    <li><strong>Оплата:</strong> 100% предоплата за пакет или экспресс-формат. Перевод на карту самозанятого.</li>
-                    <li><strong>Завершающие сессии:</strong> после любого пакета индивидуального коучинга проводятся 3 завершающие сессии (входят в стоимость). Отказ от них при расторжении — возврат не производится.</li>
-                    <li><strong>Перенос / отмена:</strong> более чем за 24 часа — бесплатно. Менее 24 часов (без уважительной причины) — сессия оплачивается и не переносится.</li>
-                    <li><strong>Опоздание:</strong> более 15 минут — сессия не проводится (сгорает).</li>
-                    <li><strong>Срок действия пакета:</strong> 5 сессий — 3 мес, 10 сессий — 6 мес, 20 сессий — 12 мес. Неиспользованные сгорают. Для экспресс-форматов — 3 месяца.</li>
-                    <li><strong>Запрещено на сессии:</strong> алкоголь, наркотики, агрессия, оскорбления, запись аудио/видео без согласия.</li>
-                    <li><strong>Отпуск (мой):</strong> предупреждаю минимум за 2 недели, сессии переносятся без штрафов. Отпуск клиента — предупредите за 2 сессии, перенесём.</li>
-                    <li><strong>Расторжение по инициативе клиента:</strong> возврат за вычетом 3 завершающих сессий (они оплачены из пакета и не возвращаются). Завершающие сессии обязательны.</li>
-                    <li><strong>С моей стороны:</strong> при невозможности продолжать работу — возврат неиспользованных средств пропорционально цене пакета.</li>
-                    <li><strong>Конфиденциальность:</strong> полная, NDA для компаний по запросу.</li>
-                    <li><strong>Поддержка в чате:</strong> Telegram для кратких вопросов и ДЗ (ответ в течение 24 часов).</li>
-                </ul>
-            </div>
+          </div>
         </div>
-    </div>
+      </div>
+    </section>
 
-    <!-- Соцсети и сообщества -->
-    <div style="padding: 0 2rem;">
-        <h2>Мои ресурсы и сообщества</h2>
-        <div class="social-grid">
-            <a href="http://www.youtube.com/@KravtsovAV" class="social-btn" target="_blank">▶ YouTube</a>
-            <a href="https://t.me/kravtsov_av_BP" class="social-btn" target="_blank">📢 Telegram-канал</a>
-            <a href="https://vkvideo.ru/@club233782665" class="social-btn" target="_blank">🎥 VK Видео</a>
-            <a href="https://vk.com/club233782665" class="social-btn" target="_blank">📘 VK Группа</a>
-            <a href="https://www.facebook.com/profile.php?id=61588009726924" class="social-btn" target="_blank">📘 Facebook</a>
-            <a href="https://max.ru/join/h4H1E_LaAlExWBAW4fkSjYGPKB-Dt3Ou8L1N5KSi1-Y" class="social-btn" target="_blank">🚀 MAX Сообщество</a>
-            <a href="https://www.linkedin.com/in/kravtsovav/" class="social-btn" target="_blank">🔗 LinkedIn</a>
+    <section>
+      <div class="wrap">
+        <div class="section-intro">
+          <div class="eyebrow">Опыт и квалификация</div>
+          <h2>Психология, управление и предпринимательство</h2>
+          <p>Моя профессиональная оптика сформировалась из двадцати лет управленческой практики, собственного бизнеса и системного психологического образования.</p>
         </div>
-    </div>
+        <div class="timeline">
+          <div class="timeline-row"><strong>2006–2017</strong><div>ВТБ. Директор по клиентской работе, первый заместитель управляющего филиалом. Управление офисом около 50 человек, кредитный комитет, работа с первыми лицами крупного бизнеса.</div></div>
+          <div class="timeline-row"><strong>2017</strong><div>Финансовый директор золотодобывающего холдинга «Нергеопром». Финансирование, управленческая отчётность и финансовая архитектура.</div></div>
+          <div class="timeline-row"><strong>с 2017</strong><div>Сооснователь и CEO VMMGAME. Производственный бизнес с совокупной годовой выручкой 350+ млн ₽, командой около 100 человек и экспортом в Казахстан, Беларусь, Армению и Узбекистан.</div></div>
+          <div class="timeline-row"><strong>с 2023</strong><div>Частная практика. 260+ индивидуальных сессий, 130+ часов супервизий и интервизий, 200+ часов личной и групповой психотерапии.</div></div>
+          <div class="timeline-row"><strong>сейчас</strong><div>В пуле коучей Школы управления СКОЛКОВО, групповой коуч программы «Профессиональный менеджер», ментор Московского экспортного центра.</div></div>
+        </div>
+      </div>
+    </section>
 
-    <div class="footer">
-        <p>© 2026 · Все права защищены</p>
-        <p>Сайт: <a href="https://kravtsovav85.github.io/S/" target="_blank">https://kravtsovav85.github.io/S/</a></p>
-    </div>
-</div>
+    <section class="dark">
+      <div class="wrap">
+        <div class="section-intro">
+          <div class="eyebrow">Образование</div>
+          <h2>Документы и профессиональное развитие</h2>
+        </div>
+        <div class="credentials">
+          <article class="credential">
+            <img src="diplom_hse.jpg" alt="Диплом магистра НИУ ВШЭ по направлению Психология">
+            <h3>Магистр психологии</h3>
+            <p>НИУ «Высшая школа экономики», направление 37.04.01 «Психология». Диплом государственного образца, 2025.</p>
+          </article>
+          <article class="credential">
+            <img src="apkbc_cert.jpg" alt="Сертификат Ассоциации психоаналитического коучинга и бизнес-консультирования">
+            <h3>Сертифицированный бизнес-коуч</h3>
+            <p>АПКБК, уровень «Специалист, I ступень». Член Ассоциации психоаналитического коучинга и бизнес-консультирования.</p>
+          </article>
+          <article class="credential">
+            <img src="emt_cert.jpg" alt="Удостоверение НИУ ВШЭ о программе EMT-терапии">
+            <h3>EMT-терапия как инструмент</h3>
+            <p>Программа повышения квалификации НИУ ВШЭ объёмом 136 академических часов, завершена в 2026 году.</p>
+          </article>
+        </div>
+        <p class="muted" style="margin-top:24px">Совокупно две программы НИУ ВШЭ составляют 1 792 академических часа. Профессиональную работу регулярно сопровождаю супервизиями, интервизиями и личной терапией.</p>
+      </div>
+    </section>
 
-<script>
-    function toggleAccordion(header) {
-        const content = header.nextElementSibling;
-        const icon = header.querySelector('.accordion-icon');
-        if (content.classList.contains('open')) {
-            content.classList.remove('open');
-            icon.textContent = '▼';
-        } else {
-            content.classList.add('open');
-            icon.textContent = '▲';
-        }
-    }
-    // открыть блок запросов по умолчанию
-    document.querySelector('.accordion-item .accordion-header').click();
-</script>
+    <section>
+      <div class="wrap">
+        <div class="section-intro">
+          <div class="eyebrow">Отзывы</div>
+          <h2>Что клиенты отмечают в работе</h2>
+          <p>Ниже приведены обезличенные фрагменты обратной связи. Результаты индивидуальны и не являются обещанием аналогичного эффекта.</p>
+        </div>
+        <div class="reviews">
+          <article class="review">
+            <blockquote>«Чёткие личные границы, фокус на деле и работа с конкретными болевыми точками. Алексей помогает разбирать бизнес-задачи через глубинную психологию: без сказочных рецептов, с честным анализом повторяющихся сценариев».</blockquote>
+            <footer>После двух месяцев индивидуальной работы · продажи, деньги и развитие собственного проекта</footer>
+          </article>
+          <article class="review">
+            <blockquote>«Никогда ещё за два часа сессии не чувствовала такой ясности».</blockquote>
+            <footer>После продолжительной индивидуальной сессии</footer>
+          </article>
+          <article class="review">
+            <blockquote>«Вы очень чётко и тактично вели встречу, выделяли суть запроса и давали человеку сформулировать сырой вариант».</blockquote>
+            <footer>После первой встречи «Группы равных»</footer>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-intro">
+          <div class="eyebrow">Границы работы</div>
+          <h2>Когда мой формат подходит, а когда нужна другая помощь</h2>
+        </div>
+        <div class="boundary">
+          <div class="boundary-card">
+            <h3>Подходит</h3>
+            <ul><li>вы собственник, CEO, руководитель или сильный специалист;</li><li>готовы исследовать собственный вклад в ситуацию;</li><li>хотите изменить способ действовать, а не получить универсальный совет;</li><li>можете выдерживать регулярную работу и проверять изменения в жизни.</li></ul>
+          </div>
+          <div class="boundary-card">
+            <h3>Не заменяет медицинскую помощь</h3>
+            <ul><li>я не ставлю психиатрические диагнозы и не назначаю лекарства;</li><li>при остром кризисе, угрозе жизни или тяжёлом состоянии нужна экстренная или медицинская помощь;</li><li>если запрос находится вне моей компетенции, я скажу об этом и порекомендую подходящий следующий шаг.</li></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="cta">
+          <div>
+            <h2>Если прежний способ действовать больше не помогает, ситуацию можно начать исследовать</h2>
+            <p>Диагностическая встреча нужна, чтобы понять задачу, задать вопросы о формате и решить, подходит ли нам совместная работа.</p>
+          </div>
+          <div class="actions">
+            <a class="button light" href="https://cal.com/kravtsovav" target="_blank" rel="noopener">Выбрать время</a>
+            <a class="button" href="https://t.me/AlekseyKravtsov" target="_blank" rel="noopener">Telegram</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-grid">
+      <div>© 2026 Алексей Кравцов<br>Бизнес-психолог для собственников и CEO</div>
+      <div class="links">
+        <a href="https://t.me/kravtsov_av_BP" target="_blank" rel="noopener">Telegram-канал</a>
+        <a href="https://www.linkedin.com/in/kravtsovav/" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="https://www.youtube.com/@KravtsovAV" target="_blank" rel="noopener">YouTube</a>
+        <a href="https://vk.com/club233782665" target="_blank" rel="noopener">VK</a>
+        <a href="https://cmp-i.com/specialist/8170" target="_blank" rel="noopener">CMP-I</a>
+      </div>
+    </div>
+  </footer>
 </body>
 </html>
