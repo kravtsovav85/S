@@ -28,9 +28,12 @@
     "sameAs": [
       "https://t.me/AlekseyKravtsov",
       "https://t.me/kravtsov_av_BP",
+      "https://www.instagram.com/kravtsov.av/",
       "https://www.linkedin.com/in/kravtsovav/",
       "https://www.youtube.com/@KravtsovAV",
       "https://vk.com/club233782665",
+      "https://tenchat.ru/KravtsovAV",
+      "https://sense-a.ru/",
       "https://cmp-i.com/specialist/8170"
     ]
   }
@@ -118,7 +121,17 @@
     .timeline{display:grid;gap:0;border-top:1px solid var(--line)}
     .timeline-row{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:20px 0;border-bottom:1px solid var(--line)}
     .timeline-row strong{color:var(--copper)}
-    .reviews{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:18px}
+    .public-story{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:38px}
+    .public-story figure{margin:0;background:var(--white);border:1px solid var(--line)}
+    .public-story img{width:100%;height:310px;object-fit:cover}
+    .public-story figcaption{padding:18px 22px;color:var(--muted);font-size:.88rem}
+    .telegram-feature{display:grid;grid-template-columns:1.15fr .85fr;gap:52px;align-items:center;background:var(--green);color:white;padding:48px}
+    .telegram-feature p{color:rgba(255,255,255,.72);margin-bottom:0}
+    .telegram-points{display:grid;gap:12px}
+    .telegram-point{padding:14px 0;border-bottom:1px solid rgba(255,255,255,.15)}
+    .telegram-point:last-child{border-bottom:0}
+    .telegram-point strong{display:block;color:white}
+    .reviews{display:grid;grid-template-columns:1.3fr .7fr;gap:18px}
     .review{background:var(--white);border:1px solid var(--line);padding:30px;display:flex;flex-direction:column;min-height:280px}
     .review blockquote{font-family:Georgia,serif;font-size:1.25rem;line-height:1.45;margin:0 0 26px}
     .review:first-child blockquote{font-size:1.55rem}
@@ -133,10 +146,10 @@
     .links{display:flex;gap:18px;flex-wrap:wrap}
     .links a{text-decoration:none}
     @media(max-width:900px){
-      .nav-links a:not(.button){display:none}.hero-grid,.split,.offer,.cta{grid-template-columns:1fr}.hero-grid{gap:48px}.hero-photo{max-width:520px}.hero-note{left:14px}.proofgrid{grid-template-columns:repeat(2,1fr)}.proof:nth-child(2){border-right:0}.proof:nth-child(-n+2){border-bottom:1px solid var(--line)}.pain-grid,.credentials{grid-template-columns:1fr}.pain-card{min-height:0}.process{grid-template-columns:repeat(2,1fr)}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}.reviews{grid-template-columns:1fr 1fr}.review:first-child{grid-column:1/-1}
+      .nav-links a:not(.button){display:none}.hero-grid,.split,.offer,.cta,.telegram-feature{grid-template-columns:1fr}.hero-grid{gap:48px}.hero-photo{max-width:520px}.hero-note{left:14px}.proofgrid{grid-template-columns:repeat(2,1fr)}.proof:nth-child(2){border-right:0}.proof:nth-child(-n+2){border-bottom:1px solid var(--line)}.pain-grid,.credentials{grid-template-columns:1fr}.pain-card{min-height:0}.process{grid-template-columns:repeat(2,1fr)}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}.reviews{grid-template-columns:1fr}
     }
     @media(max-width:620px){
-      .wrap{width:min(100% - 28px,1160px)}.nav-inner{height:62px}.nav-links{gap:8px}.nav .button{min-height:40px;padding:0 14px;font-size:.8rem}.hero{padding-top:42px}.hero-photo:before{display:none}.hero-note{position:relative;left:0;bottom:auto;margin-top:-22px;margin-left:14px}.proofgrid,.process,.reviews,.boundary{grid-template-columns:1fr}.proof,.proof:first-child{padding:20px 0;border-right:0;border-bottom:1px solid var(--line)}.step{border-right:0;border-bottom:1px solid var(--line);min-height:0}.step span{margin-bottom:20px}.timeline-row{grid-template-columns:1fr;gap:4px}.offer-main,.offer-side{padding:28px}.cta{padding:34px 26px}.actions .button{width:100%}.footer-grid{display:grid}
+      .wrap{width:min(100% - 28px,1160px)}.nav-inner{height:62px}.nav-links{gap:8px}.nav .button{min-height:40px;padding:0 14px;font-size:.8rem}.hero{padding-top:42px}.hero-photo:before{display:none}.hero-note{position:relative;left:0;bottom:auto;margin-top:-22px;margin-left:14px}.proofgrid,.process,.reviews,.boundary,.public-story{grid-template-columns:1fr}.proof,.proof:first-child{padding:20px 0;border-right:0;border-bottom:1px solid var(--line)}.step{border-right:0;border-bottom:1px solid var(--line);min-height:0}.step span{margin-bottom:20px}.timeline-row{grid-template-columns:1fr;gap:4px}.offer-main,.offer-side{padding:28px}.cta,.telegram-feature{padding:34px 26px}.public-story img{height:230px}.actions .button{width:100%}.footer-grid{display:grid}
     }
   </style>
 </head>
@@ -180,6 +193,26 @@
         <div class="proof"><strong>$1+ млн</strong><span>инвестировано в развитие бизнеса</span></div>
       </div>
     </div>
+
+    <section style="padding:42px 0 0">
+      <div class="wrap">
+        <div class="telegram-feature">
+          <div>
+            <div class="eyebrow">Основной канал</div>
+            <h2>Telegram: место, где можно познакомиться с моим способом думать и работать</h2>
+            <p>Там я публикую разборы психологических механизмов собственника, наблюдения о деньгах, команде и управленческих решениях, новые видео и спокойные приглашения в работу.</p>
+            <div class="actions" style="margin-top:26px">
+              <a class="button light" href="https://t.me/kravtsov_av_BP" target="_blank" rel="noopener">Читать Telegram-канал</a>
+            </div>
+          </div>
+          <div class="telegram-points">
+            <div class="telegram-point"><strong>Глубина</strong><span>Не универсальные советы, а логика внутренних сценариев и их цена для бизнеса.</span></div>
+            <div class="telegram-point"><strong>Живой человек</strong><span>Личный опыт, профессиональные наблюдения, видео и ответы на вопросы.</span></div>
+            <div class="telegram-point"><strong>Доверие без давления</strong><span>Можно наблюдать столько, сколько нужно, и обратиться тогда, когда задача станет актуальной.</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <section id="situations" class="dark">
       <div class="wrap">
@@ -299,6 +332,16 @@
           <div class="timeline-row"><strong>с 2023</strong><div>Частная практика. 260+ индивидуальных сессий, 130+ часов супервизий и интервизий, 200+ часов личной и групповой психотерапии.</div></div>
           <div class="timeline-row"><strong>сейчас</strong><div>В пуле коучей Школы управления СКОЛКОВО, групповой коуч программы «Профессиональный менеджер», ментор Московского экспортного центра.</div></div>
         </div>
+        <div class="public-story" aria-label="Фотографии предпринимательского и публичного опыта">
+          <figure>
+            <img src="putin_vmmgame.jpg" alt="Алексей Кравцов представляет кресло VMMGAME Владимиру Путину">
+            <figcaption>Презентация кресла VMMGAME Президенту России Владимиру Путину на конкурсе российских брендов.</figcaption>
+          </figure>
+          <figure>
+            <img src="ernst_event.jpg" alt="Алексей Кравцов и Константин Эрнст на отраслевом мероприятии">
+            <figcaption>Разговор с Константином Эрнстом на отраслевом мероприятии.</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -338,17 +381,16 @@
         </div>
         <div class="reviews">
           <article class="review">
-            <blockquote>«Чёткие личные границы, фокус на деле и работа с конкретными болевыми точками. Алексей помогает разбирать бизнес-задачи через глубинную психологию: без сказочных рецептов, с честным анализом повторяющихся сценариев».</blockquote>
+            <blockquote>«Чёткие личные границы, фокус на деле и работа с конкретными болевыми точками. Алексей помог увидеть повторяющиеся внутренние сценарии, которые влияли на продажи, деньги и развитие проекта. Теперь у меня есть понятный план, над чем работать и как действовать иначе».</blockquote>
             <footer>После двух месяцев индивидуальной работы · продажи, деньги и развитие собственного проекта</footer>
           </article>
           <article class="review">
-            <blockquote>«Никогда ещё за два часа сессии не чувствовала такой ясности».</blockquote>
-            <footer>После продолжительной индивидуальной сессии</footer>
+            <blockquote>«Работа с ментальным здоровьем - одна из лучших инвестиций, которые я сделал. Если тревога, страх или злость начинают мешать жить, работать или принимать решения, рекомендую обратиться к Алексею».</blockquote>
+            <footer>Из публичной рекомендации клиента</footer>
           </article>
-          <article class="review">
-            <blockquote>«Вы очень чётко и тактично вели встречу, выделяли суть запроса и давали человеку сформулировать сырой вариант».</blockquote>
-            <footer>После первой встречи «Группы равных»</footer>
-          </article>
+        </div>
+        <div class="actions" style="margin-top:24px">
+          <a class="button secondary" href="https://forms.yandex.ru/u/6a79f4136d2d73d57effb713/" target="_blank" rel="noopener">Оставить отзыв</a>
         </div>
       </div>
     </section>
@@ -396,7 +438,11 @@
         <a href="https://www.linkedin.com/in/kravtsovav/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.youtube.com/@KravtsovAV" target="_blank" rel="noopener">YouTube</a>
         <a href="https://vk.com/club233782665" target="_blank" rel="noopener">VK</a>
+        <a href="https://www.instagram.com/kravtsov.av/" target="_blank" rel="noopener">Instagram</a>
         <a href="https://cmp-i.com/specialist/8170" target="_blank" rel="noopener">CMP-I</a>
+        <a href="https://sense-a.ru/" target="_blank" rel="noopener">Sense-A</a>
+        <a href="https://tenchat.ru/KravtsovAV" target="_blank" rel="noopener">TenChat</a>
+        <a href="https://forms.yandex.ru/u/6a79f4136d2d73d57effb713/" target="_blank" rel="noopener">Оставить отзыв</a>
       </div>
     </div>
   </footer>
