@@ -41,6 +41,26 @@
     ]
   }
   </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "name": "Нарциссический характер: возможности и риски для лидера",
+    "url": "https://www.hse.ru/edu/vkr/1045388166",
+    "datePublished": "2025",
+    "inLanguage": "ru",
+    "author": {
+      "@type": "Person",
+      "name": "Алексей Викторович Кравцов",
+      "url": "https://alekseykravtsov.ru/"
+    },
+    "publisher": {
+      "@type": "CollegeOrUniversity",
+      "name": "НИУ «Высшая школа экономики»",
+      "url": "https://www.hse.ru/"
+    }
+  }
+  </script>
   <style>
     :root {
       --ink:#17201d;
@@ -137,6 +157,9 @@
     .telegram-point:last-child{border-bottom:0}
     .telegram-point strong{display:block;color:white}
     .reviews{display:grid;grid-template-columns:1.3fr .7fr;gap:18px}
+    .research-card{margin-top:38px;padding:32px;border:1px solid rgba(255,255,255,.18);border-radius:22px;background:rgba(255,255,255,.06);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+    .research-card h3{margin:8px 0 12px;font-size:clamp(1.45rem,2.4vw,2rem)}
+    .research-card p{margin:0;color:rgba(255,255,255,.72);max-width:780px}
     .review{background:var(--white);border:1px solid var(--line);padding:30px;display:flex;flex-direction:column;min-height:280px}
     .review blockquote{font-family:Georgia,serif;font-size:1.25rem;line-height:1.45;margin:0 0 26px}
     .review:first-child blockquote{font-size:1.55rem}
@@ -155,7 +178,7 @@
     .legal-links{display:flex;gap:8px 16px;flex-wrap:wrap;margin-top:14px}
     .legal-links a{text-decoration:none}
     @media(max-width:900px){
-      .nav-links a:not(.button){display:none}.hero-grid,.split,.offer,.cta,.telegram-feature{grid-template-columns:1fr}.hero-grid{gap:48px}.hero-photo{max-width:520px}.hero-note{left:14px}.proofgrid{grid-template-columns:repeat(2,1fr)}.proof:nth-child(2){border-right:0}.proof:nth-child(-n+2){border-bottom:1px solid var(--line)}.pain-grid,.credentials{grid-template-columns:1fr}.pain-card{min-height:0}.process{grid-template-columns:repeat(2,1fr)}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}.reviews{grid-template-columns:1fr}
+      .nav-links a:not(.button){display:none}.hero-grid,.split,.offer,.cta,.telegram-feature,.research-card{grid-template-columns:1fr}.hero-grid{gap:48px}.hero-photo{max-width:520px}.hero-note{left:14px}.proofgrid{grid-template-columns:repeat(2,1fr)}.proof:nth-child(2){border-right:0}.proof:nth-child(-n+2){border-bottom:1px solid var(--line)}.pain-grid,.credentials{grid-template-columns:1fr}.pain-card{min-height:0}.process{grid-template-columns:repeat(2,1fr)}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}.reviews{grid-template-columns:1fr}
     }
     @media(max-width:620px){
       .wrap{width:min(100% - 28px,1160px)}.nav-inner{height:62px}.nav-links{gap:8px}.nav .button{min-height:40px;padding:0 14px;font-size:.8rem}.hero{padding-top:42px}.hero-photo:before{display:none}.hero-note{position:relative;left:0;bottom:auto;margin-top:-22px;margin-left:14px}.proofgrid,.process,.reviews,.boundary,.public-story{grid-template-columns:1fr}.proof,.proof:first-child{padding:20px 0;border-right:0;border-bottom:1px solid var(--line)}.step{border-right:0;border-bottom:1px solid var(--line);min-height:0}.step span{margin-bottom:20px}.timeline-row{grid-template-columns:1fr;gap:4px}.offer-main,.offer-side{padding:28px}.cta,.telegram-feature{padding:34px 26px}.public-story img{height:230px}.actions .button{width:100%}.footer-grid,.footer-links{grid-template-columns:1fr}.footer-links{gap:24px}.credential img{height:300px}
@@ -399,6 +422,14 @@
           </article>
         </div>
         <p class="muted" style="margin-top:24px">Совокупно две программы НИУ ВШЭ составляют 1 792 академических часа. Профессиональную работу регулярно сопровождаю супервизиями, интервизиями и личной терапией.</p>
+        <article class="research-card" id="publications">
+          <div>
+            <div class="eyebrow">Исследование · НИУ ВШЭ · 2025</div>
+            <h3>«Нарциссический характер: возможности и риски для лидера»</h3>
+            <p>Магистерское исследование двойственной роли нарциссических черт в лидерстве и управленческой деятельности. Эмпирическая часть основана на опросе 217 предпринимателей и психоаналитическом анализе управленческого кейса.</p>
+          </div>
+          <a class="button light" href="https://www.hse.ru/edu/vkr/1045388166" target="_blank" rel="noopener">Читать на сайте ВШЭ</a>
+        </article>
       </div>
     </section>
 
