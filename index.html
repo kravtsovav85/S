@@ -28,6 +28,7 @@
     "sameAs": [
       "https://t.me/AlekseyKravtsov",
       "https://t.me/kravtsov_av_BP",
+      "https://max.ru/u/f9LHodD0cOKXv3wTp6Mtz75B2BWA1TwHpMPB-uu1Hq-P2153R32EhXr1bM0",
       "https://www.instagram.com/kravtsov.av/",
       "https://www.linkedin.com/in/kravtsovav/",
       "https://www.youtube.com/@KravtsovAV",
@@ -114,9 +115,11 @@
     .small{font-size:.86rem;color:var(--muted)}
     .offer ul{padding-left:19px;margin:22px 0}
     .diagnostic{margin-top:20px;padding:24px;border:1px solid var(--line)}
+    .provider-details{margin-top:24px;padding-top:20px;border-top:1px solid var(--line);font-size:.84rem;color:var(--muted)}
+    .provider-details strong{display:block;color:var(--ink);margin-bottom:7px}
     .credentials{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .credential{background:var(--white);border:1px solid var(--line);padding:26px}
-    .credential img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:top;margin-bottom:22px;border:1px solid var(--line)}
+    .credential img{width:100%;height:330px;object-fit:contain;object-position:center;margin-bottom:22px;border:1px solid var(--line);background:#fff}
     .credential p{color:var(--muted);font-size:.9rem;margin-bottom:0}
     .timeline{display:grid;gap:0;border-top:1px solid var(--line)}
     .timeline-row{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:20px 0;border-bottom:1px solid var(--line)}
@@ -142,14 +145,18 @@
     .cta{background:var(--green);color:white;padding:64px;border-radius:4px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:center}
     .cta h2{margin-bottom:10px}.cta p{margin:0;color:rgba(255,255,255,.7);max-width:670px}
     .footer{padding:42px 0;color:var(--muted);font-size:.84rem}
-    .footer-grid{display:flex;justify-content:space-between;gap:32px;align-items:flex-start;border-top:1px solid var(--line);padding-top:28px}
-    .links{display:flex;gap:18px;flex-wrap:wrap}
+    .footer-grid{display:grid;grid-template-columns:minmax(220px,.8fr) minmax(0,1.4fr);gap:48px;align-items:start;border-top:1px solid var(--line);padding-top:28px}
+    .footer-links{display:grid;grid-template-columns:1fr 1fr;gap:38px}
+    .footer-group strong{display:block;margin-bottom:12px;color:var(--ink);font-family:Georgia,serif;font-size:1rem;font-weight:500}
+    .links{display:flex;gap:10px 18px;flex-wrap:wrap}
     .links a{text-decoration:none}
+    .legal-links{display:flex;gap:8px 16px;flex-wrap:wrap;margin-top:14px}
+    .legal-links a{text-decoration:none}
     @media(max-width:900px){
       .nav-links a:not(.button){display:none}.hero-grid,.split,.offer,.cta,.telegram-feature{grid-template-columns:1fr}.hero-grid{gap:48px}.hero-photo{max-width:520px}.hero-note{left:14px}.proofgrid{grid-template-columns:repeat(2,1fr)}.proof:nth-child(2){border-right:0}.proof:nth-child(-n+2){border-bottom:1px solid var(--line)}.pain-grid,.credentials{grid-template-columns:1fr}.pain-card{min-height:0}.process{grid-template-columns:repeat(2,1fr)}.step:nth-child(2){border-right:0}.step:nth-child(-n+2){border-bottom:1px solid var(--line)}.reviews{grid-template-columns:1fr}
     }
     @media(max-width:620px){
-      .wrap{width:min(100% - 28px,1160px)}.nav-inner{height:62px}.nav-links{gap:8px}.nav .button{min-height:40px;padding:0 14px;font-size:.8rem}.hero{padding-top:42px}.hero-photo:before{display:none}.hero-note{position:relative;left:0;bottom:auto;margin-top:-22px;margin-left:14px}.proofgrid,.process,.reviews,.boundary,.public-story{grid-template-columns:1fr}.proof,.proof:first-child{padding:20px 0;border-right:0;border-bottom:1px solid var(--line)}.step{border-right:0;border-bottom:1px solid var(--line);min-height:0}.step span{margin-bottom:20px}.timeline-row{grid-template-columns:1fr;gap:4px}.offer-main,.offer-side{padding:28px}.cta,.telegram-feature{padding:34px 26px}.public-story img{height:230px}.actions .button{width:100%}.footer-grid{display:grid}
+      .wrap{width:min(100% - 28px,1160px)}.nav-inner{height:62px}.nav-links{gap:8px}.nav .button{min-height:40px;padding:0 14px;font-size:.8rem}.hero{padding-top:42px}.hero-photo:before{display:none}.hero-note{position:relative;left:0;bottom:auto;margin-top:-22px;margin-left:14px}.proofgrid,.process,.reviews,.boundary,.public-story{grid-template-columns:1fr}.proof,.proof:first-child{padding:20px 0;border-right:0;border-bottom:1px solid var(--line)}.step{border-right:0;border-bottom:1px solid var(--line);min-height:0}.step span{margin-bottom:20px}.timeline-row{grid-template-columns:1fr;gap:4px}.offer-main,.offer-side{padding:28px}.cta,.telegram-feature{padding:34px 26px}.public-story img{height:230px}.actions .button{width:100%}.footer-grid,.footer-links{grid-template-columns:1fr}.footer-links{gap:24px}.credential img{height:300px}
     }
   </style>
 </head>
@@ -161,7 +168,7 @@
         <a href="#situations">С чем работаю</a>
         <a href="#approach">Подход</a>
         <a href="#format">Формат и цена</a>
-        <a class="button" href="https://cal.com/kravtsovav" target="_blank" rel="noopener">Записаться</a>
+        <a class="button" href="#contact">Написать</a>
       </div>
     </div>
   </nav>
@@ -174,8 +181,8 @@
           <h1>Психология управленческих решений собственника</h1>
           <p class="lead">Помогаю увидеть и изменить внутренние сценарии, которые влияют на решения, деньги, команду, партнёрства и способность пройти сложный переход.</p>
           <div class="actions">
-            <a class="button" href="https://cal.com/kravtsovav" target="_blank" rel="noopener">Записаться на диагностику</a>
-            <a class="button secondary" href="https://t.me/AlekseyKravtsov" target="_blank" rel="noopener">Написать в Telegram</a>
+            <a class="button" href="https://t.me/AlekseyKravtsov" target="_blank" rel="noopener">Написать в Telegram</a>
+            <a class="button secondary" href="https://max.ru/u/f9LHodD0cOKXv3wTp6Mtz75B2BWA1TwHpMPB-uu1Hq-P2153R32EhXr1bM0" target="_blank" rel="noopener">Написать в MAX</a>
           </div>
         </div>
         <div class="hero-photo">
@@ -298,7 +305,10 @@
               <li>конфиденциальность и профессиональные границы;</li>
               <li>краткая связь в Telegram по организационным вопросам.</li>
             </ul>
-            <a class="button" href="https://cal.com/kravtsovav" target="_blank" rel="noopener">Выбрать время диагностики</a>
+            <div class="actions">
+              <a class="button" href="https://t.me/AlekseyKravtsov" target="_blank" rel="noopener">Telegram</a>
+              <a class="button secondary" href="https://max.ru/u/f9LHodD0cOKXv3wTp6Mtz75B2BWA1TwHpMPB-uu1Hq-P2153R32EhXr1bM0" target="_blank" rel="noopener">MAX</a>
+            </div>
           </div>
           <div class="offer-side">
             <h3>Как завершается работа</h3>
@@ -312,6 +322,11 @@
             <div class="diagnostic">
               <strong>Диагностическая встреча · 30 минут · бесплатно</strong>
               <p class="small">Коротко знакомимся, уточняем ситуацию и проверяем, соответствует ли мой формат вашей задаче. Эта встреча не заменяет полноценную рабочую сессию.</p>
+            </div>
+            <div class="provider-details">
+              <strong>Оплата и сведения об исполнителе</strong>
+              Кравцов Алексей Викторович · ИНН 753700950967 · плательщик налога на профессиональный доход.<br>
+              После оплаты клиент получает электронный чек, сформированный в приложении «Мой налог». Банковские реквизиты направляются после согласования работы.
             </div>
           </div>
         </div>
@@ -414,16 +429,16 @@
       </div>
     </section>
 
-    <section>
+    <section id="contact">
       <div class="wrap">
         <div class="cta">
           <div>
-            <h2>Если прежний способ действовать больше не помогает, ситуацию можно начать исследовать</h2>
-            <p>Диагностическая встреча нужна, чтобы понять задачу, задать вопросы о формате и решить, подходит ли нам совместная работа.</p>
+            <h2>Если прежний способ действовать больше не помогает, напишите мне</h2>
+            <p>Коротко опишите ситуацию в Telegram или MAX. Я отвечу лично и, если мой формат подходит для вашей задачи, отправлю ссылку для выбора времени диагностической встречи.</p>
           </div>
           <div class="actions">
-            <a class="button light" href="https://cal.com/kravtsovav" target="_blank" rel="noopener">Выбрать время</a>
-            <a class="button" href="https://t.me/AlekseyKravtsov" target="_blank" rel="noopener">Telegram</a>
+            <a class="button light" href="https://t.me/AlekseyKravtsov" target="_blank" rel="noopener">Написать в Telegram</a>
+            <a class="button" href="https://max.ru/u/f9LHodD0cOKXv3wTp6Mtz75B2BWA1TwHpMPB-uu1Hq-P2153R32EhXr1bM0" target="_blank" rel="noopener">Написать в MAX</a>
           </div>
         </div>
       </div>
@@ -432,17 +447,33 @@
 
   <footer class="footer">
     <div class="wrap footer-grid">
-      <div>© 2026 Алексей Кравцов<br>Бизнес-психолог для собственников и CEO</div>
-      <div class="links">
-        <a href="https://t.me/kravtsov_av_BP" target="_blank" rel="noopener">Telegram-канал</a>
-        <a href="https://www.linkedin.com/in/kravtsovav/" target="_blank" rel="noopener">LinkedIn</a>
-        <a href="https://www.youtube.com/@KravtsovAV" target="_blank" rel="noopener">YouTube</a>
-        <a href="https://vk.com/club233782665" target="_blank" rel="noopener">VK</a>
-        <a href="https://www.instagram.com/kravtsov.av/" target="_blank" rel="noopener">Instagram</a>
-        <a href="https://cmp-i.com/specialist/8170" target="_blank" rel="noopener">CMP-I</a>
-        <a href="https://sense-a.ru/" target="_blank" rel="noopener">Sense-A</a>
-        <a href="https://tenchat.ru/KravtsovAV" target="_blank" rel="noopener">TenChat</a>
-        <a href="https://forms.yandex.ru/u/6a79f4136d2d73d57effb713/" target="_blank" rel="noopener">Оставить отзыв</a>
+      <div>
+        © 2026 Алексей Кравцов<br>Бизнес-психолог для собственников и CEO
+        <div class="legal-links">
+          <a href="privacy.html">Политика конфиденциальности</a>
+          <a href="mailto:i@avkravtsov.ru">i@avkravtsov.ru</a>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div class="footer-group">
+          <strong>Социальные сети</strong>
+          <div class="links">
+            <a href="https://t.me/kravtsov_av_BP" target="_blank" rel="noopener">Telegram-канал</a>
+            <a href="https://www.linkedin.com/in/kravtsovav/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://www.youtube.com/@KravtsovAV" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://vk.com/club233782665" target="_blank" rel="noopener">VK</a>
+            <a href="https://www.instagram.com/kravtsov.av/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://max.ru/u/f9LHodD0cOKXv3wTp6Mtz75B2BWA1TwHpMPB-uu1Hq-P2153R32EhXr1bM0" target="_blank" rel="noopener">MAX</a>
+          </div>
+        </div>
+        <div class="footer-group">
+          <strong>Профессиональные профили</strong>
+          <div class="links">
+            <a href="https://cmp-i.com/specialist/8170" target="_blank" rel="noopener">CMP-I</a>
+            <a href="https://sense-a.ru/" target="_blank" rel="noopener">Sense-A</a>
+            <a href="https://tenchat.ru/KravtsovAV" target="_blank" rel="noopener">TenChat</a>
+          </div>
+        </div>
       </div>
     </div>
   </footer>
