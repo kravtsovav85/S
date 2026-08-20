@@ -19,68 +19,53 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "@id": "https://alekseykravtsov.ru/#person",
-    "name": "Алексей Викторович Кравцов",
-    "alternateName": "Алексей Кравцов",
-    "url": "https://alekseykravtsov.ru/",
-    "image": "https://alekseykravtsov.ru/alexey_kravtsov.jpg",
-    "jobTitle": "Бизнес-психолог",
-    "description": "Бизнес-психолог для собственников и CEO. Специализация: психология управленческих решений собственника.",
-    "knowsAbout": ["психология управленческих решений", "психодинамический коучинг", "делегирование", "бизнес-партнёрства", "управленческая отчётность", "P&L", "cash flow"],
-    "alumniOf": {"@type":"CollegeOrUniversity","name":"НИУ «Высшая школа экономики»"},
-    "sameAs": [
-      "https://t.me/AlekseyKravtsov",
-      "https://t.me/kravtsov_av_BP",
-      "https://max.ru/u/f9LHodD0cOKXv3wTp6Mtz75B2BWA1TwHpMPB-uu1Hq-P2153R32EhXr1bM0",
-      "https://www.instagram.com/kravtsov.av/",
-      "https://www.linkedin.com/in/kravtsovav/",
-      "https://www.youtube.com/@KravtsovAV",
-      "https://vk.com/club233782665",
-      "https://tenchat.ru/KravtsovAV",
-      "https://sense-a.ru/s/c/kravtsov-aleksei-9f7",
-      "https://cmp-i.com/specialist/8170",
-      "https://www.hse.ru/edu/vkr/1045388166"
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": "https://alekseykravtsov.ru/#webpage",
+        "url": "https://alekseykravtsov.ru/",
+        "name": "Алексей Кравцов | Бизнес-психолог для собственников и CEO",
+        "mainEntity": {"@id": "https://alekseykravtsov.ru/#person"}
+      },
+      {
+        "@type": "Person",
+        "@id": "https://alekseykravtsov.ru/#person",
+        "name": "Алексей Викторович Кравцов",
+        "alternateName": "Алексей Кравцов",
+        "url": "https://alekseykravtsov.ru/",
+        "image": "https://alekseykravtsov.ru/alexey_kravtsov.jpg",
+        "jobTitle": "Бизнес-психолог",
+        "description": "Бизнес-психолог для собственников и CEO. Специализация: психология управленческих решений собственника.",
+        "knowsAbout": ["психология управленческих решений", "психодинамический коучинг", "делегирование", "бизнес-партнёрства", "профессиональные переходы", "продажи и деньги", "управленческая отчётность", "P&L", "cash flow"],
+        "alumniOf": {"@type":"CollegeOrUniversity","name":"НИУ «Высшая школа экономики»","url":"https://www.hse.ru/"},
+        "sameAs": [
+          "https://companies.rbc.ru/experts/29352/aleksej-kravtsov/",
+          "https://t.me/AlekseyKravtsov",
+          "https://t.me/kravtsov_av_BP",
+          "https://max.ru/u/f9LHodD0cOKXv3wTp6Mtz75B2BWA1TwHpMPB-uu1Hq-P2153R32EhXr1bM0",
+          "https://www.instagram.com/kravtsov.av/",
+          "https://www.linkedin.com/in/kravtsovav/",
+          "https://www.youtube.com/@KravtsovAV",
+          "https://vk.com/club233782665",
+          "https://tenchat.ru/KravtsovAV",
+          "https://sense-a.ru/s/c/kravtsov-aleksei-9f7",
+          "https://cmp-i.com/specialist/8170"
+        ],
+        "subjectOf": [
+          {"@type":"Article","headline":"Три стратегии для развития управленческой рефлексии","url":"https://companies.rbc.ru/news/KTeoDHVpEb/tri-strategii-dlya-razvitiya-upravlencheskoj-refleksii/","datePublished":"2026-08-18","publisher":{"@type":"Organization","name":"РБК Компании","url":"https://companies.rbc.ru/"}},
+          {"@type":"ScholarlyArticle","name":"Нарциссический характер: возможности и риски для лидера","url":"https://www.hse.ru/edu/vkr/1045388166","datePublished":"2025","publisher":{"@type":"CollegeOrUniversity","name":"НИУ «Высшая школа экономики»","url":"https://www.hse.ru/"}}
+        ]
+      },
+      {
+        "@type":"ProfessionalService",
+        "@id":"https://alekseykravtsov.ru/#service",
+        "name":"Алексей Кравцов, бизнес-психолог",
+        "url":"https://alekseykravtsov.ru/",
+        "provider":{"@id":"https://alekseykravtsov.ru/#person"},
+        "areaServed":"RU",
+        "serviceType":"Психологическое консультирование и бизнес-коучинг для собственников и CEO"
+      }
     ]
-  }
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "Три стратегии для развития управленческой рефлексии",
-    "url": "https://companies.rbc.ru/news/KTeoDHVpEb/tri-strategii-dlya-razvitiya-upravlencheskoj-refleksii/",
-    "datePublished": "2026-08-18",
-    "inLanguage": "ru",
-    "author": {"@id": "https://alekseykravtsov.ru/#person"},
-    "publisher": {
-      "@type": "Organization",
-      "name": "РБК Компании",
-      "url": "https://companies.rbc.ru/"
-    }
-  }
-  </script>
-  <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://alekseykravtsov.ru/#service","name":"Алексей Кравцов, бизнес-психолог","url":"https://alekseykravtsov.ru/","provider":{"@id":"https://alekseykravtsov.ru/#person"},"areaServed":"RU","serviceType":"Психологическое консультирование и бизнес-коучинг для собственников и CEO"}
-  </script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
-    "name": "Нарциссический характер: возможности и риски для лидера",
-    "url": "https://www.hse.ru/edu/vkr/1045388166",
-    "datePublished": "2025",
-    "inLanguage": "ru",
-    "author": {
-      "@type": "Person",
-      "name": "Алексей Викторович Кравцов",
-      "url": "https://alekseykravtsov.ru/"
-    },
-    "publisher": {
-      "@type": "CollegeOrUniversity",
-      "name": "НИУ «Высшая школа экономики»",
-      "url": "https://www.hse.ru/"
-    }
   }
   </script>
   <style>
@@ -296,6 +281,7 @@
         <div class="seo-grid">
           <a class="seo-card" href="/about/"><strong>Об Алексее Кравцове</strong><span>20 лет управления, банковский и предпринимательский опыт, создание и масштабирование собственного бизнеса.</span></a>
           <a class="seo-card" href="/qualification/"><strong>Образование и квалификация</strong><span>Подготовка в НИУ ВШЭ, практика, супервизии, интервизии, личная терапия и подтверждающие документы.</span></a>
+          <a class="seo-card" href="/publications/"><strong>Публикации и выступления</strong><span>РБК Компании, исследование НИУ ВШЭ, внешние подтверждения предпринимательского опыта и публичная практика.</span></a>
         </div>
       </div>
     </section>
@@ -600,6 +586,9 @@
           <a class="seo-card" href="/delegirovanie/"><strong>Почему собственник не может делегировать</strong><span>Контроль, ответственность, доверие команде и цена ручного управления.</span></a>
           <a class="seo-card" href="/operacionka/"><strong>Как собственнику выйти из операционки</strong><span>Старый способ управления уже ограничивает бизнес, но новая роль пока не начинается.</span></a>
           <a class="seo-card" href="/konflikt-partnerov/"><strong>Конфликт бизнес-партнёров</strong><span>Власть, доверие, конкуренция и повторяющиеся сценарии собственников.</span></a>
+          <a class="seo-card" href="/prodazhi-i-cena/"><strong>Почему трудно продавать и называть цену</strong><span>Сопротивление выходу к рынку, деньгам и присвоению собственного профессионального уровня.</span></a>
+          <a class="seo-card" href="/perehod-sobstvennika/"><strong>Переход собственника к следующей роли</strong><span>Старое уже не работает, а новое пока не стало способом действовать.</span></a>
+          <a class="seo-card" href="/upravlencheskoe-reshenie/"><strong>Решение под эмоциональным давлением</strong><span>Как внутренняя реакция может перехватывать управление бизнес-задачей.</span></a>
         </div>
       </div>
     </section>
