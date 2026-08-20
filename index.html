@@ -45,6 +45,22 @@
   }
   </script>
   <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Три стратегии для развития управленческой рефлексии",
+    "url": "https://companies.rbc.ru/news/KTeoDHVpEb/tri-strategii-dlya-razvitiya-upravlencheskoj-refleksii/",
+    "datePublished": "2026-08-18",
+    "inLanguage": "ru",
+    "author": {"@id": "https://alekseykravtsov.ru/#person"},
+    "publisher": {
+      "@type": "Organization",
+      "name": "РБК Компании",
+      "url": "https://companies.rbc.ru/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"ProfessionalService","@id":"https://alekseykravtsov.ru/#service","name":"Алексей Кравцов, бизнес-психолог","url":"https://alekseykravtsov.ru/","provider":{"@id":"https://alekseykravtsov.ru/#person"},"areaServed":"RU","serviceType":"Психологическое консультирование и бизнес-коучинг для собственников и CEO"}
   </script>
   <script type="application/ld+json">
@@ -184,7 +200,8 @@
     .reviews-dots{display:flex;justify-content:center;gap:8px;margin-top:18px}
     .review-dot{width:9px;height:9px;padding:0;border:0;border-radius:50%;background:rgba(38,59,52,.22);cursor:pointer}
     .review-dot[aria-current="true"]{background:var(--copper);transform:scale(1.22)}
-    .research-card{margin-top:38px;padding:32px;border:1px solid rgba(255,255,255,.18);border-radius:22px;background:rgba(255,255,255,.06);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
+    .research-list{display:grid;gap:18px;margin-top:38px}
+    .research-card{padding:32px;border:1px solid rgba(255,255,255,.18);border-radius:22px;background:rgba(255,255,255,.06);display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}
     .research-card h3{margin:8px 0 12px;font-size:clamp(1.45rem,2.4vw,2rem)}
     .research-card p{margin:0;color:rgba(255,255,255,.72);max-width:780px}
     .boundary{display:grid;grid-template-columns:1fr 1fr;gap:18px}
@@ -469,14 +486,24 @@
           </article>
         </div>
         <p class="muted" style="margin-top:24px">Совокупно две программы НИУ ВШЭ составляют 1 792 академических часа. Профессиональную работу регулярно сопровождаю супервизиями, интервизиями и личной терапией.</p>
-        <article class="research-card" id="publications">
-          <div>
-            <div class="eyebrow">Исследование · НИУ ВШЭ · 2025</div>
-            <h3>«Нарциссический характер: возможности и риски для лидера»</h3>
-            <p>Магистерское исследование двойственной роли нарциссических черт в лидерстве и управленческой деятельности. Эмпирическая часть основана на опросе 217 предпринимателей и психоаналитическом анализе управленческого кейса.</p>
-          </div>
-          <a class="button light" href="https://www.hse.ru/edu/vkr/1045388166" target="_blank" rel="noopener">Читать на сайте ВШЭ</a>
-        </article>
+        <div class="research-list" id="publications">
+          <article class="research-card">
+            <div>
+              <div class="eyebrow">Экспертная статья · РБК Компании · 2026</div>
+              <h3>«Три стратегии для развития управленческой рефлексии»</h3>
+              <p>Как руководителю выдерживать давление, замечать собственные реакции и принимать более точные решения. Три стратегии: выдержать, исследовать и действовать.</p>
+            </div>
+            <a class="button light" href="https://companies.rbc.ru/news/KTeoDHVpEb/tri-strategii-dlya-razvitiya-upravlencheskoj-refleksii/" target="_blank" rel="noopener">Читать на РБК</a>
+          </article>
+          <article class="research-card">
+            <div>
+              <div class="eyebrow">Исследование · НИУ ВШЭ · 2025</div>
+              <h3>«Нарциссический характер: возможности и риски для лидера»</h3>
+              <p>Магистерское исследование двойственной роли нарциссических черт в лидерстве и управленческой деятельности. Эмпирическая часть основана на опросе 217 предпринимателей и психоаналитическом анализе управленческого кейса.</p>
+            </div>
+            <a class="button light" href="https://www.hse.ru/edu/vkr/1045388166" target="_blank" rel="noopener">Читать на сайте ВШЭ</a>
+          </article>
+        </div>
       </div>
     </section>
 
