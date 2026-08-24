@@ -1,5 +1,5 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#172033"/>
-  <path d="M15 45 27.5 17h5L45 45h-7l-2.4-6H24.2L22 45h-7Zm11.5-12h6.8L30 24.5 26.5 33Z" fill="#fff"/>
-  <path d="M43 18h6v27h-6z" fill="#bf8a5a"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AK">
+  <rect width="64" height="64" rx="13" fill="#17201D"/>
+  <text x="31" y="42" text-anchor="middle" fill="#FFFFFF" font-family="Georgia, 'Times New Roman', serif" font-size="29" font-weight="700" letter-spacing="-2.5">AK</text>
+  <rect x="14" y="49" width="36" height="2" rx="1" fill="#A96842"/>
 </svg>
