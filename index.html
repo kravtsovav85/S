@@ -192,15 +192,25 @@
       .offer{padding:56px 0}.format-grid{grid-template-columns:1fr 1fr}.format-item,.format-item:first-child,.format-item:last-child{min-height:112px;padding:18px 14px}.format-item:nth-child(2){border-right:0}.format-item:nth-child(-n+2){border-bottom:1px solid var(--line)}.offer-summary{grid-template-columns:1fr;gap:22px}.offer-actions{align-items:flex-start;flex-direction:column}.publication-grid{grid-template-columns:1fr}.publication{justify-content:flex-start;border-right:0;border-bottom:1px solid var(--line);padding:14px 0}.telegram-actions{flex-direction:column;align-items:flex-start;gap:8px}.final .button{min-width:0;width:100%}.footer-in{flex-direction:column}
     }
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}}
+
+    .nav-in{gap:24px}.nav-links{gap:24px;font-size:.9rem}.nav-group{position:relative}.nav-group summary{cursor:pointer;list-style:none;min-height:44px;display:flex;align-items:center;gap:8px;white-space:nowrap}.nav-group summary::-webkit-details-marker{display:none}.nav-group summary:after{content:'⌄';color:var(--copper)}.nav-group[open] summary:after{content:'⌃'}
+    .nav-dropdown{position:absolute;top:calc(100% + 8px);left:0;min-width:235px;padding:10px;background:var(--paper);border:1px solid var(--line);box-shadow:0 16px 36px rgba(23,32,29,.1)}.nav-dropdown a{display:block;padding:10px 12px;min-height:44px;text-decoration:none}.nav-dropdown a:hover,.nav-dropdown a:focus-visible{background:var(--paper-2)}.nav-links>a:not(.button){min-height:44px;display:flex;align-items:center;white-space:nowrap}.nav-toggle{display:none}.nav a:focus-visible,.nav summary:focus-visible,.nav-toggle:focus-visible{outline:2px solid var(--copper);outline-offset:4px}section[id]{scroll-margin-top:105px}
+    @media(max-width:1120px){.nav-toggle{display:block;padding:10px 16px;min-height:44px;background:transparent;border:1px solid var(--line);color:var(--ink);font:inherit;cursor:pointer}.nav-links{display:none;position:absolute;top:100%;left:0;right:0;padding:16px 24px 24px;background:var(--paper);border-bottom:1px solid var(--line);max-height:calc(100dvh - 84px);overflow-y:auto}.nav-links.is-open{display:flex;flex-direction:column;align-items:stretch;gap:4px}.nav-links>a:not(.button){display:flex;padding:8px 0}.nav .button{display:inline-flex;margin-top:12px}.nav-dropdown{position:static;box-shadow:none;border:0;border-left:1px solid var(--line);margin:0 0 10px 8px;min-width:0;padding:0 10px}.nav-group summary{padding:8px 0}.nav-in{gap:12px}.nav-links .button{align-self:flex-start}}
+    @media(max-width:620px){.nav-links{max-height:calc(100dvh - 62px);padding-left:18px;padding-right:18px}.nav-links .button{display:inline-flex}}
   </style>
 </head>
 <body>
   <nav class="nav" aria-label="Основная навигация">
     <div class="wrap nav-in">
       <a class="brand" href="/">Алексей Кравцов</a>
-      <div class="nav-links">
-        <a href="#situations">С чем работаю</a><a href="#approach">Подход</a><a href="#format">Формат</a><a href="/about/">Биография</a><a href="/materials/">Материалы</a><a href="#telegram">Telegram</a>
-        <a class="button" href="https://t.me/AlekseyKravtsovBot?start=website" target="_blank" rel="noopener">Обсудить ситуацию</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation">Меню</button>
+      <div class="nav-links" id="main-navigation">
+        <details class="nav-group"><summary>Работа со мной</summary><div class="nav-dropdown"><a href="#situations">С чем работаю</a><a href="#approach">Подход</a><a href="#format">Формат и стоимость</a><a href="/terms/">Условия работы</a></div></details>
+        <details class="nav-group"><summary>Об Алексее</summary><div class="nav-dropdown"><a href="/about/">Биография</a><a href="/qualification/">Квалификация</a><a href="/reviews/">Отзывы</a><a href="/cases/">Кейсы</a></div></details>
+        <a href="/materials/">Материалы</a>
+        <a href="https://speaker.alekseykravtsov.ru/">Выступления</a>
+        <details class="nav-group"><summary>Контакты</summary><div class="nav-dropdown"><a href="mailto:i@avkravtsov.ru">Написать на почту</a><a href="https://t.me/AlekseyKravtsovBot?start=website" target="_blank" rel="noopener">Telegram-навигатор</a><a href="https://t.me/kravtsov_av_BP" target="_blank" rel="noopener">Telegram-канал</a><a href="https://cal.com/kravtsovav" target="_blank" rel="noopener">Выбрать время встречи</a></div></details>
+        <a class="button" href="https://cal.com/kravtsovav" target="_blank" rel="noopener">Записаться</a>
       </div>
     </div>
   </nav>
@@ -299,6 +309,20 @@
   </main>
 
   <footer><div class="wrap footer-in"><span>© Алексей Кравцов, 2026</span><div class="footer-links"><a href="/kak-vybrat-biznes-psihologa/">Как выбрать специалиста</a><a href="/psihodinamicheskiy-biznes-kouching/">О методе</a><a href="/cases/">Кейсы</a><a href="/privacy.html">Конфиденциальность</a><a href="/terms/">Условия работы</a><a href="/reviews/">Отзывы</a><a href="/materials/">Материалы</a><a href="mailto:i@avkravtsov.ru">i@avkravtsov.ru</a><a href="https://forms.yandex.ru/u/6a79f4136d2d73d57effb713/" target="_blank" rel="noopener">Оставить отзыв</a></div></div></footer>
+  <script>
+    (() => {
+      const toggle = document.querySelector('.nav-toggle');
+      const links = document.getElementById('main-navigation');
+      const groups = [...links.querySelectorAll('details')];
+      const close = () => { links.classList.remove('is-open'); toggle.setAttribute('aria-expanded', 'false'); groups.forEach(group => group.open = false); };
+      toggle.addEventListener('click', () => { const open = !links.classList.contains('is-open'); links.classList.toggle('is-open', open); toggle.setAttribute('aria-expanded', String(open)); });
+      groups.forEach(group => group.addEventListener('toggle', () => { if (group.open) groups.forEach(other => { if (other !== group) other.open = false; }); }));
+      links.addEventListener('click', event => { if (event.target.closest('a')) close(); });
+      document.addEventListener('click', event => { if (!event.target.closest('.nav')) close(); });
+      document.addEventListener('keydown', event => { if (event.key === 'Escape') { const activeGroup = groups.find(group => group.open); const wasMobileOpen = links.classList.contains('is-open'); close(); if (wasMobileOpen) toggle.focus(); else if (activeGroup) activeGroup.querySelector('summary').focus(); } });
+      window.matchMedia('(max-width:1120px)').addEventListener('change', close);
+    })();
+  </script>
   <script>
     (() => {
       const motion = window.matchMedia('(min-width: 901px) and (prefers-reduced-motion: no-preference)');
