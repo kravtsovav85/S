@@ -1,6 +1,13 @@
 (function () {
   'use strict';
 
+  if (!document.querySelector('script[src="/metrika.js"]')) {
+    var metrikaScript = document.createElement('script');
+    metrikaScript.src = '/metrika.js';
+    metrikaScript.async = true;
+    document.head.appendChild(metrikaScript);
+  }
+
   var KEY = 'ak-social-popup';
   var opened = false;
   var previousFocus = null;
