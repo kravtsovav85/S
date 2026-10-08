@@ -1,0 +1,48 @@
+/* Local design variant. Glass is a CSS approximation, not optical refraction. */
+:root{--glass-edge:rgba(255,255,255,.7)}
+.nav{position:relative;z-index:40;height:96px;border-bottom:0;background:#f7f6f1;padding:12px 0}
+.nav-in{height:72px;padding:0 23px;border-radius:19px;border:1px solid rgba(255,255,255,.9);background:linear-gradient(135deg,rgba(255,255,255,.91),rgba(225,233,222,.7));backdrop-filter:blur(16px) saturate(120%);box-shadow:inset 0 1px 0 #fff,0 8px 25px #20372d0b,0 0 0 1px #21392d12}
+.brand{display:flex;align-items:center;gap:13px}
+.chrome-mark{width:38px;height:38px;flex-shrink:0;filter:drop-shadow(0 2px 2px #243a3225)}
+.chrome-mark .shine{transform:translateX(-50px);animation:chrome-shine 12s ease-in-out infinite}
+@keyframes chrome-shine{0%,35%{transform:translateX(-55px)}65%,100%{transform:translateX(60px)}}
+.button{position:relative;overflow:hidden;border-radius:13px;border:1px solid #557868;background:linear-gradient(145deg,#426957 0%,#254c39 45%,#19372b 100%);box-shadow:inset 0 1px 0 #c5ddba70,inset 0 -2px 0 #102c2370,0 6px 15px #16342416}
+.button:before{content:'';position:absolute;inset:0;pointer-events:none;border-radius:inherit;background:linear-gradient(115deg,transparent 12%,rgba(255,255,255,.15) 25%,transparent 45%)}
+.button.outline{border-color:#aabcb088;background:linear-gradient(130deg,#ffffffd9,#e4ece3a8);backdrop-filter:blur(10px);box-shadow:inset 0 1px 0 #fff,inset 0 -1px 0 #536a5420,0 6px 15px #19362409}
+.button.white{border-color:#ffffffbc;background:linear-gradient(140deg,#fff 0%,#dfeadf 100%);box-shadow:inset 0 1px 0 #fff,0 5px 20px #0e221d35}
+.hero{background:#f7f6f1}
+.hero-copy{z-index:3}
+.hero-photo:after{background:linear-gradient(90deg,#f7f6f1 0%,#f7f6f1ed 12%,#f7f6f19c 29%,transparent 54%)}
+.hero:after{content:'';position:absolute;z-index:1;pointer-events:none;inset:auto 0 0;height:140px;background:radial-gradient(ellipse at 22% 100%,#bb916027,transparent 65%)}
+.hero-wave{position:absolute;z-index:2;left:0;right:40%;bottom:0;height:115px;overflow:hidden;pointer-events:none;opacity:.42;mask-image:linear-gradient(0deg,#000,transparent)}
+.hero-wave:before{content:'';position:absolute;width:130%;height:220px;left:-15%;bottom:-135px;border-radius:50%;border:1px solid #a27c51;box-shadow:0 -4px 30px #b19b6922,inset 0 10px 20px #ddcdb635;transform:rotate(-9deg);animation:hero-wave 20s ease-in-out infinite alternate}
+@keyframes hero-wave{from{transform:translate(-3%,8%) rotate(-9deg)}to{transform:translate(5%,-5%) rotate(3deg)}}
+.meeting{position:relative;isolation:isolate;overflow:hidden;background:#18332a}
+.meeting:before{content:'';position:absolute;z-index:-2;inset:0;background:radial-gradient(ellipse at 100% 100%,#9e794c6b,transparent 55%),linear-gradient(125deg,#19332b,#223d31)}
+.wave-canvas{position:absolute;z-index:-1;inset:0;width:100%;height:100%;pointer-events:none;opacity:.68}
+.meeting-grid{position:relative;z-index:2}
+.meeting-grid>div:last-child{padding:9px 24px 21px;border-radius:20px;background:linear-gradient(135deg,#ffffff0d,#10291ea8);backdrop-filter:blur(7px);border:1px solid #ffffff26;box-shadow:inset 0 1px 0 #ffffff20,0 12px 32px #061c1417}
+.meeting .steps{border-top:0}
+.meeting .steps-note{color:#d5dfd4}
+.meeting .meta{color:#d6e2d8}
+.meeting .lead,.meeting .step p{color:#e3eae3}
+.trust{background:linear-gradient(140deg,#f8f6f0,#ecf0e6)}
+.portrait{border-radius:17px;box-shadow:0 10px 26px #223b2820}
+.proof>div{padding:24px 25px;border-radius:18px;border:1px solid #fff;background:linear-gradient(145deg,#ffffffcb,#f8faf2a1);box-shadow:0 8px 24px #1a3a2605,inset 0 1px 0 #fff}
+.proof{border-top:0;padding-top:0;gap:22px}
+.telegram{background:radial-gradient(ellipse at 93% 100%,#c4ae8d4d,transparent 55%),linear-gradient(125deg,#e7ece1,#f5f1e6)}
+.guide{padding:26px;border-radius:22px;background:linear-gradient(135deg,#ffffff93,#ffffffe0);border:1px solid #fff;box-shadow:0 10px 28px #233c2310;gap:26px}
+.book{border-radius:3px}
+.article{border-radius:17px;background:linear-gradient(150deg,#f7f8f1,#ecefe5);border:1px solid #e1e7db;box-shadow:inset 0 1px 0 #fff,0 6px 20px #19352406}
+.final{background:radial-gradient(ellipse at 100% 110%,#7d633d77,transparent 68%),linear-gradient(125deg,#1c352c,#284335)}
+.mobile-bar{background:linear-gradient(130deg,#ffffffed,#e4ede5ee);backdrop-filter:blur(12px);border-top:1px solid #fff;box-shadow:0 -5px 25px #223b2412}
+@media(max-width:700px){.nav{height:80px;padding:10px 0}.nav-in{height:60px;padding:0 12px;border-radius:16px}.brand{font-size:17px;gap:8px}.chrome-mark{width:29px;height:29px}.mobile-menu{border-radius:8px;background:#ffffffa6;font-size:11px}.navlinks.is-open{top:80px;border-radius:0 0 18px 18px;background:#fafcf5}.hero-photo:after{background:linear-gradient(180deg,#f7f6f1 0%,#f7f6f1cc 8%,transparent 29%)}.hero-wave{display:none}.meeting-grid>div:last-child{padding:4px 18px 18px;margin-top:26px}.steps{margin-top:4px}.wave-canvas{opacity:.38}.proof>div{padding:22px 20px}.proof .case{border-bottom:1px solid #fff;margin-bottom:16px}.guide{padding:20px 16px;gap:18px;grid-template-columns:112px 1fr}.portrait{height:260px}.mobile-bar{padding-block:9px}.button{border-radius:11px}}
+@media(prefers-reduced-motion:reduce){.chrome-mark .shine,.hero-wave:before{animation:none}.wave-canvas{display:none}}
+html[data-motion="static"] .chrome-mark .shine,html[data-motion="static"] .hero-wave:before{animation:none}
+html[data-motion="static"] .wave-canvas{display:none}
+html[data-motion="paused"] .chrome-mark .shine,html[data-motion="paused"] .hero-wave:before{animation-play-state:paused}
+@supports not (backdrop-filter:blur(1px)){.nav-in{background:#eff3e9}.meeting-grid>div:last-child{background:#223b30}.button.outline{background:#edf3e9}.mobile-bar{background:#f2f5ed}}
+.guide>div{min-width:0}.guide h3{overflow-wrap:break-word;hyphens:auto}
+@media(max-width:360px){.guide{grid-template-columns:96px minmax(0,1fr);gap:14px;padding-inline:14px}.book{width:96px}.book strong{font-size:18px}.guide h3{font-size:20px}.brand{font-size:15px;gap:6px}.chrome-mark{width:25px;height:25px}}
+.hero:not(.effects-inview) .hero-wave:before,.nav:not(.effects-inview) .chrome-mark .shine{animation-play-state:paused}
+.meeting:before{background:#19372b}.silk-wave{position:absolute;z-index:-1;inset:-10%;pointer-events:none;background:url('/meeting-wave.svg') center/100% 100% no-repeat;animation:silk-meeting 27s ease-in-out infinite alternate;animation-play-state:paused}.meeting.effects-inview .silk-wave{animation-play-state:running}@keyframes silk-meeting{from{transform:translate(-2%,2%) rotate(-2deg)}to{transform:translate(2%,-2%) rotate(2deg)}}html[data-motion='static'] .silk-wave{animation:none}html[data-motion='paused'] .silk-wave{animation-play-state:paused!important}@media(prefers-reduced-motion:reduce){.silk-wave{animation:none}}@media(max-width:700px){.silk-wave{opacity:.7}}
