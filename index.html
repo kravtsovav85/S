@@ -43,6 +43,45 @@
   .site-home .mobile-bar { gap: 8px; padding-inline: 12px; }
   .site-home .mobile-bar .button { padding-inline: 10px; }
 }
+</style><style>
+.site-home .actions,
+.site-home .trust-links {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 12px;
+  width: min(100%, 440px);
+}
+.site-home :is(.actions, .trust-links, .mobile-bar) > :is(.button, .button.text-link) {
+  align-self: stretch;
+  width: 100%;
+  min-width: 0;
+  min-height: 50px;
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 14px;
+  line-height: 1.35;
+  text-align: center;
+}
+.site-home .final .actions { grid-template-columns: minmax(0, 1fr); }
+.site-home .article .button.outline.text-link {
+  align-self: stretch;
+  width: 100%;
+  min-height: 48px;
+  margin-top: auto;
+}
+.site-home .article p { margin-bottom: 14px; }
+@media (max-width: 700px) {
+  .site-home .mobile-bar:not(.is-hidden) {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: stretch;
+  }
+  .site-home .mobile-bar > :is(.button, .button.text-link) { min-height: 44px; padding: 8px; font-size: 12px; }
+}
+@media (max-width: 400px) {
+  .site-home .actions { grid-template-columns: minmax(0, 1fr); }
+}
 </style></head><body class="site-home">
 <nav class="nav"><div class="wrap nav-in"><a class="brand brand-wordmark" href="/" aria-label="Алексей Кравцов, главная"><span>Алексей</span><span>Кравцов</span></a><div class="navlinks"><a href="#situations">С чем работаю</a><a href="#meeting">Первая встреча</a><a href="#about">Об Алексее</a><a href="#format">Формат</a><a href="#articles">Статьи</a><a class="speaker-nav-link" href="https://speaker.alekseykravtsov.ru/">Выступления</a><a class="button" href="https://cal.com/kravtsovav/30">Записаться</a></div><button class="mobile-menu" type="button" aria-label="Открыть меню">Меню ≡</button></div></nav>
 <main>
