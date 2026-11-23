@@ -45,14 +45,15 @@
 }
 </style><style>
 .site-home .actions,
-.site-home .trust-links {
+.site-home .trust-links,
+.site-home .hero-bot {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
   align-items: stretch;
   gap: 12px;
   width: min(100%, 440px);
 }
-.site-home :is(.actions, .trust-links, .mobile-bar) > :is(.button, .button.text-link) {
+.site-home :is(.actions, .trust-links, .hero-bot, .mobile-bar) > :is(.button, .button.text-link) {
   align-self: stretch;
   width: 100%;
   min-width: 0;
@@ -63,6 +64,8 @@
   line-height: 1.35;
   text-align: center;
 }
+.site-home .hero-bot { row-gap: 8px; }
+.site-home .hero-bot > span { grid-column: 1 / -1; }
 .site-home .final .actions { grid-template-columns: minmax(0, 1fr); }
 .site-home .article .button.outline.text-link {
   align-self: stretch;
@@ -88,13 +91,13 @@
   .site-home .mobile-bar > :is(.button, .button.text-link) { min-height: 44px; padding: 8px; font-size: 12px; }
 }
 @media (max-width: 400px) {
-  .site-home .actions { grid-template-columns: minmax(0, 1fr); }
+  .site-home :is(.actions, .hero-bot) { grid-template-columns: minmax(0, 1fr); }
 }
 </style></head><body class="site-home">
 <nav class="nav"><div class="wrap nav-in"><a class="brand brand-wordmark" href="/" aria-label="Алексей Кравцов, главная"><span>Алексей</span><span>Кравцов</span></a><div class="navlinks"><a href="#situations">С чем работаю</a><a href="#meeting">Первая встреча</a><a href="#about">Об Алексее</a><a href="#format">Формат</a><a href="#articles">Статьи</a><a class="speaker-nav-link" href="https://speaker.alekseykravtsov.ru/">Выступления</a><a class="button" href="https://cal.com/kravtsovav/30">Записаться</a></div><button class="mobile-menu" type="button" aria-label="Открыть меню">Меню ≡</button></div></nav>
 <main>
 <header class="hero"><div class="wrap hero-inner"><div class="hero-copy"><p class="hero-service">Индивидуальная психологическая работа с решениями в бизнесе</p><div class="eyebrow">Бизнес-психолог для собственников и CEO<span class="hero-context">Сложное решение · контроль · партнёрство</span></div><h1>Когда бизнес требует решения,<br>а внутри нет ясности</h1><p class="lead">Помогаю увидеть, что мешает принять решение, разобраться в доступных вариантах и определить следующий шаг.</p><p class="hero-trust">20 лет управленческой практики · магистр психологии НИУ ВШЭ</p><div class="actions"><a class="button" href="https://cal.com/kravtsovav/30">Записаться на встречу</a><a class="button outline" href="https://t.me/AlekseyKravtsov">Написать в Telegram</a></div><p class="hero-note">Начать можно с диагностической встречи: 30 минут, онлайн.</p><div class="hero-bot"><span>Хотите сначала познакомиться?</span><a class="button outline text-link" href="https://t.me/AlekseyKravtsovBot?start=site_home">Материалы в Telegram</a></div></div><div class="hero-photo"><img src="assets/hero.webp" alt="Алексей Кравцов" width="1172" height="781" fetchpriority="high" decoding="async"></div></div></header>
-<div class="facts"><div class="wrap facts-in"><div class="fact"><strong class="serif">20 лет</strong><span>управленческой и предпринимательской практики</span></div><div class="fact"><strong class="serif">350 часов</strong><span>психологической практики</span></div><div class="fact"><strong class="serif">АПКБК</strong><span>сертифицированный бизнес-коуч</span></div></div></div>
+<div class="facts"><div class="wrap facts-in"><div class="fact"><strong class="serif">20 лет</strong><span>управленческой и предпринимательской практики</span></div><div class="fact"><strong class="serif">Более 400 часов</strong><span>психологической практики</span></div><div class="fact"><strong class="serif">АПКБК</strong><span>сертифицированный бизнес-коуч</span></div></div></div>
 <section class="section" id="situations"><div class="wrap"><div class="section-head"><div><div class="eyebrow">С чем можно прийти</div><h2>Ситуация в бизнесе.<br>Ваше участие в ней.</h2></div><p>Рабочий запрос начинается с конкретного затруднения. Вместе смотрим на обстоятельства компании и на то, что мешает вам действовать.</p></div><div class="situations"><a class="situation" href="/upravlencheskoe-reshenie/"><small>01</small><div><h3>Решение откладывается</h3><p>Варианты уже понятны, но трудно принять риск, отказаться от прежнего плана или начать действовать.</p></div><span class="button outline situation-action" aria-hidden="true">Подробнее</span></a><a class="situation" href="/delegirovanie/"><small>02</small><div><h3>Контроль не отпускает</h3><p>Вы хотите передать ответственность команде, но снова проверяете и возвращаете задачи себе.</p></div><span class="button outline situation-action" aria-hidden="true">Подробнее</span></a><a class="situation" href="/konflikt-partnerov/"><small>03</small><div><h3>С партнёром трудно говорить</h3><p>Разногласия о ролях, деньгах или будущем компании остаются без обсуждения.</p></div><span class="button outline situation-action" aria-hidden="true">Подробнее</span></a><a class="situation" href="/perehod-sobstvennika/"><small>04</small><div><h3>Прежняя роль стала тесной</h3><p>Бизнес меняется. Нужно понять, какую роль вы готовы занять и от чего отказаться.</p></div><span class="button outline situation-action" aria-hidden="true">Подробнее</span></a></div><div class="situations-foot"><p>В работе исследуем возможные внутренние механизмы. Финансовый анализ и управленческие решения остаются частью реальности бизнеса.</p><a class="button outline text-link" href="#meeting">С чего начать</a></div></div></section>
 <section class="section meeting" id="meeting"><div class="wrap meeting-grid"><div><div class="eyebrow">Первый шаг · 30 минут онлайн</div><h2>Начнём с вашей ситуации</h2><p class="lead">Диагностическая встреча помогает уточнить запрос и понять, подходит ли вам мой формат работы.</p><a class="button white" href="https://cal.com/kravtsovav/30">Выбрать время встречи</a><p class="meta">Условия и доступное время смотрите в сервисе записи.</p></div><div><div class="steps"><div class="step"><span class="num">01</span><div><h3>Обсуждаем затруднение</h3><p>Что происходит, какое решение требуется и где вы пока не можете продвинуться.</p></div></div><div class="step"><span class="num">02</span><div><h3>Уточняем запрос</h3><p>На что можно повлиять в работе и какое изменение имеет для вас смысл.</p></div></div><div class="step"><span class="num">03</span><div><h3>Определяем следующий шаг</h3><p>Обсуждаем формат, если он подходит вашей задаче. Решение о продолжении вы принимаете после встречи.</p></div></div></div><p class="steps-note">Если сначала хотите задать вопрос, можно написать мне лично в Telegram.</p></div></div></section>
 <section class="section trust" id="about"><div class="wrap"><div class="trust-top"><img class="portrait" src="assets/portrait.webp" alt="Алексей Кравцов" width="768" height="960" loading="lazy" decoding="async"><div><div class="eyebrow">Психология и опыт управления</div><h2>Понимаю человека<br>и реальность бизнеса</h2><p>В работе соединяю психодинамический подход с управленческой и предпринимательской практикой. Это помогает обсуждать внутреннее напряжение в контексте решений, денег, команды и партнёрства.</p><div class="trust-links"><a class="button outline text-link" href="/about/">Биография</a><a class="button outline text-link" href="/qualification/">Квалификация</a></div></div></div><div class="proof"><div class="case"><div class="eyebrow">Анонимизированный кейс</div><h3>От откладывания к действию</h3><p>Клиент откладывал отправку счетов и решение о закрытии нерентабельного направления. Результат: закрыт объём зависших платёжных документов; неработающее направление закрыто.</p><small>Период: одна неделя. Оценка связи с работой принадлежит клиенту.</small><a class="button outline text-link" href="/cases/">Смотреть кейсы</a></div><div><div class="eyebrow">Новый отзыв о работе</div><blockquote>«Он помогает мне увидеть то, что необходимо именно сейчас, чтобы я могла самостоятельно принять решение».</blockquote><cite>Тамара, предприниматель.<br>Опубликовано с разрешения автора.</cite><a class="button outline text-link" href="/reviews/#tamara">Читать полный отзыв</a></div></div></div></section>
